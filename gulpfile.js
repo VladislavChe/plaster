@@ -73,15 +73,16 @@ task('sassMain', function () {
     .pipe(browserSync.reload({ stream: true }));
 });
 
+//take our foulders from JS
 task('jsLibs', function () {
   return (
     src(['app/libs/**/**/*.js'])
       .pipe(concat('libs.min.js'))
       /*
-    .pipe(babel({
-			presets: ['@babel/env']
-		}))
-    */
+        .pipe(babel({
+          presets: ['@babel/env']
+        }))
+      */
       .pipe(uglify())
       .pipe(dest('app/js'))
   );
@@ -177,7 +178,9 @@ task('build', async function () {
         presets: ['@babel/preset-env'],
       })
     )
+    /* OFF compile JS 
     .pipe(uglify())
+    */
     .pipe(dest('dist/js'));
 
   let buildHtml = src('app/*.html').pipe(dest('dist'));
