@@ -157,7 +157,12 @@ task('default', parallel('watch', 'browser-sync', 'jsLibs', 'sassLibs'));
 task('build', async function () {
   del.sync(['dist/*']);
 
-  let buildCss = src('app/css/**/*').pipe(dest('dist/css'));
+  let buildCss = src('app/css/**/*')
+    /* OFF compile CSS 
+    .pipe(csso())
+    .pipe(cssnano())
+    */
+    .pipe(dest('dist/css'));
 
   let buildFonts = src('app/fonts/**/*').pipe(dest('dist/fonts'));
 
