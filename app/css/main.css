@@ -422,7 +422,7 @@ li {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1140px;
   padding: 0 15px; }
 
 .d-flex {
@@ -433,5 +433,30 @@ li {
   display: -ms-flexbox;
   display: flex; }
 
-.title {
-  color: red; }
+.contacts-line {
+  padding: 10px 0;
+  background-color: #3a2e33; }
+  .contacts-line__mail span {
+    font-size: 1rem;
+    opacity: 0.8; }
+  .contacts-line__tel span {
+    font-size: 1rem;
+    opacity: 0.8; }
+  .contacts-line__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 120px;
+    margin-left: auto; }
+    .contacts-line__social a {
+      margin-right: 10px; }
+      .contacts-line__social a:last-child {
+        margin-right: 0; }
+      .contacts-line__social a svg {
+        width: 20px;
+        height: 20px; }
+      .contacts-line__social a path {
+        fill: white; }
