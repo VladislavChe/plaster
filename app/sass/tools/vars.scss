@@ -2,9 +2,12 @@ $out: 1px solid red !important;
 $time: 0.5s ease-in-out;
 
 /* ------ Fonts ------ */
-$montserrat: 'Montserrat', sans-serif;
-$opensans: 'Open Sans', sans-serif;
+$font: 'Open Sans', sans-serif;
 
 /* ------ Colors ------ */
 $mainColor: #c70039;
-$whitesmoke: whitesmoke;
+$textcolor: whitesmoke;
+$bgcolor: #101010;
+
+/* ------ Opacity ------ */
+$opacity: 0.8;
