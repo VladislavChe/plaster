@@ -1,17 +1,36 @@
 .contacts-line {
   padding: 10px 0;
-  background-color: #3a2e33;
-  &__mail {
-    span {
-      font-size: 1rem;
-      opacity: 0.8;
+  &__contacts {
+    display: inline;
+    a {
+      transition: $time;
+      svg {
+        opacity: 0.8;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+      path {
+        fill: white;
+      }
+      span {
+        font-size: 16px;
+        opacity: 0.8;
+      }
+      &:hover {
+        color: white !important;
+        transition: $time;
+        svg,
+        path,
+        span {
+          transition: $time;
+          opacity: 1;
+        }
+      }
     }
   }
   &__tel {
-    span {
-      font-size: 1rem;
-      opacity: 0.8;
-    }
+    margin-left: 20px;
   }
   &__social {
     display: flex;
@@ -24,8 +43,14 @@
         margin-right: 0;
       }
       svg {
+        opacity: 0.8;
         width: 20px;
         height: 20px;
+        transition: $time;
+        &:hover {
+          opacity: 1;
+          transition: $time;
+        }
       }
       path {
         fill: white;
