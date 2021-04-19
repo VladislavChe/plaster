@@ -5,9 +5,18 @@ header.index-header
   .index-header__nav
     .container 
       include ../blocks/nav-menu
-  .container
-    .row
-      .col-6
-        h1.title Title2
-      .col-6 
-        h2.title2 Title2
+  .index-header__overlay
+    .container
+      .row
+        .col-12
+          .index-header__offer
+            h1.index-header__title 
+              | Механизированная штукатурка 
+              span  стен потолков и откосов
+              br
+              | в Москве и МО
+            p.index-header__text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo ad, exercitationem laudantium doloremque dolorum commodi ut fugiat eius ex odio maxime deleniti nostrum, hic facere accusantium et dolor error minima.
+            .index-header__buttons
+              a(class="index-header__btn index-header__btn--blue" href="#") UI elements
+                include ../svg/right-arrow
+            

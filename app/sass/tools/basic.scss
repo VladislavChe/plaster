@@ -43,6 +43,7 @@ h6 {
 }
 
 h1 {
+  font-size: 30px;
   @include media(992px) {
     font-size: 35px;
   }
@@ -77,6 +78,7 @@ a {
     text-decoration: none;
     outline: none;
     transition: all $time;
+    color: none !important;
   }
 }
 
