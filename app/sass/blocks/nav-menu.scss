@@ -1,7 +1,16 @@
 .nav-menu {
   &__logo {
-    width: 50px;
-    height: 50px;
+    img {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+    }
+    span {
+      margin-left: 10px;
+      font-size: 19px;
+      color: $textcolor;
+      font-weight: bold;
+    }
   }
   &__list {
     display: flex;
@@ -39,7 +48,7 @@
     align-items: center;
     position: relative;
     font-size: 16px;
-    color: #303036;
+    color: $textcolor;
     overflow: hidden;
     span {
       transform: translateY(0);
@@ -97,7 +106,7 @@
     span {
       display: inline-block;
       font-size: 16px;
-      color: #303036;
+      color: $textcolor;
       transform: translateY(0);
       transition: all 0.4s;
     }
@@ -122,10 +131,16 @@
     input {
       padding: 0 15px;
       border-radius: 25px;
-      border: 1px solid rgb(0, 0, 0);
+      border: 1px solid transparent;
+      box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
       font-size: 13px;
       line-height: 25px;
-      color: #303036;
+      color: $textcolor;
+      transition: all 0.1s ease-in;
+      &:hover {
+        box-shadow: 0 2px 8px 1px rgba(64, 60, 67, 0.24);
+        border-color: rgba(223, 225, 229, 0);
+      }
     }
     span {
       display: block;

@@ -322,8 +322,8 @@ body {
   background-color: #fff;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  color: whitesmoke;
-  font-size: 25px;
+  color: #303036;
+  font-size: 16px;
   padding: 0;
   margin: 0; }
 
@@ -449,6 +449,7 @@ li {
       .contacts-line__contacts a path {
         fill: white; }
       .contacts-line__contacts a span {
+        color: white;
         font-size: 16px;
         opacity: 0.8; }
       .contacts-line__contacts a:hover {
@@ -502,9 +503,16 @@ li {
   -webkit-box-shadow: 0px 0px 14px 0px rgba(77, 82, 94, 0.15);
           box-shadow: 0px 0px 14px 0px rgba(77, 82, 94, 0.15); }
 
-.nav-menu__logo {
+.nav-menu__logo img {
   width: 50px;
-  height: 50px; }
+  height: 50px;
+  display: inline-block; }
+
+.nav-menu__logo span {
+  margin-left: 10px;
+  font-size: 19px;
+  color: #303036;
+  font-weight: bold; }
 
 .nav-menu__list {
   display: -webkit-box;
@@ -650,10 +658,19 @@ li {
   .nav-menu__search-label input {
     padding: 0 15px;
     border-radius: 25px;
-    border: 1px solid black;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
+            box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
     font-size: 13px;
     line-height: 25px;
-    color: #303036; }
+    color: #303036;
+    -webkit-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in; }
+    .nav-menu__search-label input:hover {
+      -webkit-box-shadow: 0 2px 8px 1px rgba(64, 60, 67, 0.24);
+              box-shadow: 0 2px 8px 1px rgba(64, 60, 67, 0.24);
+      border-color: rgba(223, 225, 229, 0); }
   .nav-menu__search-label span {
     display: block;
     position: absolute;
