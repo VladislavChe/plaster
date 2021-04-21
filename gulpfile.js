@@ -156,7 +156,7 @@ task('watch', function () {
   watch('app/js/**/*.js', parallel('html'));
 });
 
-task('default', parallel('watch', 'browser-sync', 'jsLibs', 'sassLibs'));
+task('default', parallel('watch', 'browser-sync', 'jsLibs', 'sassLibs', 'svg'));
 //END gulp watch
 
 //BEGIN gulp build
