@@ -68,7 +68,7 @@
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
-    height: 100%;
+    height: 83%;
   }
   &__top-contacts {
     background-color: #3a2e33;
@@ -299,5 +299,91 @@
         fill: $mainColor;
       }
     }
+  }
+}
+
+.our-services {
+  padding: 70px 0;
+  &__item {
+    margin-bottom: 45px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 56px;
+    p {
+      color: $mainColor;
+    }
+    h2 {
+      font-size: 40px;
+      font-weight: bold;
+      text-transform: none;
+    }
+  }
+}
+
+.services-card {
+  position: relative;
+  display: block;
+  padding: 24px;
+  border-radius: 10px;
+  transition: $time;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d2d2de;
+    border-radius: 10px;
+  }
+  &:hover::after {
+    border-color: transparent;
+  }
+  &:hover {
+    color: #fff;
+    background: $mainColor;
+    .services-card__icon-wrapp {
+      background: #fff;
+    }
+    .services-card__icon {
+      fill: $mainColor;
+    }
+  }
+  &__icon-wrapp {
+    margin: 0 auto 16px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: $mainColor;
+    transition: $time;
+  }
+  &__icon {
+    fill: #fff;
+    display: block;
+    width: 50px;
+    height: 50px;
+    transition: $time;
+  }
+  &__title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  &__text {
+    text-align: center;
+  }
+}
+
+.icon-facebook {
+  fill: blue;
+  display: block;
+  width: 40px;
+  height: 40px;
+  &:hover {
+    fill: red;
   }
 }

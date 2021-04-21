@@ -1,0 +1,18 @@
+.our-services {
+  padding: 70px 0;
+  &__item {
+    margin-bottom: 45px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 56px;
+    p {
+      color: $mainColor;
+    }
+    h2 {
+      font-size: 40px;
+      font-weight: bold;
+      text-transform: none;
+    }
+  }
+}

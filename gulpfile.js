@@ -103,33 +103,38 @@ task('html', function () {
   return src('app/*.html').pipe(browserSync.reload({ stream: true }));
 });
 
-/*
-task('svg', function() {
-	return src('app/img/svg/icons/*.svg')
-		.pipe(svgmin({
-			js2svg: {
-				pretty: true
-			}
-		}))
-		.pipe(cheerio({
-			run: function ($) {
-				$('[fill]').removeAttr('fill');
-				$('[stroke]').removeAttr('stroke');
-				$('[style]').removeAttr('style');
-			},
-			parserOptions: {xmlMode: true}
-		}))
-		.pipe(replace('&gt;', '>'))
-		.pipe(svgSprite({
-			mode: {
-				symbol: {
-					sprite: "sprite.svg"
-				}
-			}
-		}))
-		.pipe(dest('app/img/svg'));
+//SVG
+task('svg', function () {
+  return src('app/img/svg/icons/*.svg')
+    .pipe(
+      svgmin({
+        js2svg: {
+          pretty: true,
+        },
+      })
+    )
+    .pipe(
+      cheerio({
+        run: function ($) {
+          $('[fill]').removeAttr('fill');
+          $('[stroke]').removeAttr('stroke');
+          $('[style]').removeAttr('style');
+        },
+        parserOptions: { xmlMode: true },
+      })
+    )
+    .pipe(replace('&gt;', '>'))
+    .pipe(
+      svgSprite({
+        mode: {
+          symbol: {
+            sprite: 'sprite.svg',
+          },
+        },
+      })
+    )
+    .pipe(dest('app/img/svg'));
 });
-*/
 
 //BEGIN gulp watch
 task('watch', function () {
@@ -142,7 +147,7 @@ task('watch', function () {
 
   watch('app/pug/**/*.pug', parallel('pug'));
 
-  //watch('app/img/svg/icons/*.svg', parallel('svg'));
+  watch('app/img/svg/icons/*.svg', parallel('svg'));
 
   watch(
     'app/libs/**/*{js,css,sass,scss}',
@@ -192,8 +197,7 @@ task('build', async function () {
 
   //let buildHtaccess = src('app/.htaccess').pipe(dest('dist'));
 
-  //let buildSvg = src('app/img/svg/**/*')
-  //	.pipe(dest('dist/img/svg'));
+  let buildSvg = src('app/img/svg/**/*').pipe(dest('dist/img/svg'));
 
   let imgDist = 'dist/img';
   let builImg = src(['app/img/**/*', '!app/img/sprites/**/*'])
