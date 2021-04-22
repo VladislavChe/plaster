@@ -1,35 +1,59 @@
 .index-header {
-  position: relative;
-  background: url(/img/src/index-header-bg.jpg) no-repeat center;
-  min-height: 760px;
-  &__overlay {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 83%;
-  }
   &__top-contacts {
     background-color: #3a2e33;
   }
   &__nav {
-    position: sticky;
+    display: flex;
+    align-items: center;
+    position: relative;
     top: 0;
+    height: 80px;
     z-index: 9999;
     background: #fff;
-    padding: 20px 0;
     box-shadow: 0px 0px 14px 0px rgba(77, 82, 94, 0.15);
+    &.nav-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      .index-header__content {
+        margin-top: 80px;
+      }
+    }
   }
-  &__offer {
-    margin-top: 10%;
+
+  &__content {
+    position: relative;
+    display: block;
+    padding: 10% 0;
+    background: url(/img/src/index-header-bg.jpg) no-repeat center;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    &.content-fixed {
+      margin-top: 80px;
+    }
+  }
+  &__content-inner {
+    position: relative;
   }
   &__title {
     color: #fff;
     font-weight: bold;
-    max-width: 570px;
+    max-width: 300px;
+    line-height: 50px;
+    text-transform: none;
     opacity: 0.9;
   }
   &__text {
-    max-width: 659px;
+    max-width: 450px;
     margin-top: 40px;
     color: #fff;
     opacity: 0.9;
