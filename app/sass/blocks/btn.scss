@@ -1,0 +1,44 @@
+.btn {
+  --width: 100%;
+  --time: 0.7s;
+  position: relative;
+  display: inline-block;
+  padding: 9px 18px;
+  color: white;
+  background: #222;
+  overflow: hidden;
+  border-radius: 6px;
+  text {
+    position: relative;
+    z-index: 5;
+    transition: color var(--time);
+    font-size: 14px;
+  }
+  span {
+    position: absolute;
+    display: block;
+    content: '';
+    z-index: 0;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    transition: width var(--time), padding-top var(--time);
+  }
+  &:hover {
+    text {
+      color: #222;
+    }
+    span {
+      width: calc(var(--width) * 2.25);
+      padding-top: calc(var(--width) * 2.25);
+    }
+  }
+  &__icon {
+    fill: #fff;
+    width: 13px;
+    height: 13px;
+    margin-left: 8px;
+  }
+}

@@ -1,3 +1,48 @@
+.btn {
+  --width: 100%;
+  --time: 0.7s;
+  position: relative;
+  display: inline-block;
+  padding: 9px 18px;
+  color: white;
+  background: #222;
+  overflow: hidden;
+  border-radius: 6px;
+  text {
+    position: relative;
+    z-index: 5;
+    transition: color var(--time);
+    font-size: 14px;
+  }
+  span {
+    position: absolute;
+    display: block;
+    content: '';
+    z-index: 0;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    transition: width var(--time), padding-top var(--time);
+  }
+  &:hover {
+    text {
+      color: #222;
+    }
+    span {
+      width: calc(var(--width) * 2.25);
+      padding-top: calc(var(--width) * 2.25);
+    }
+  }
+  &__icon {
+    fill: #fff;
+    width: 13px;
+    height: 13px;
+    margin-left: 8px;
+  }
+}
+
 .contacts-line {
   padding: 10px 0;
   &__contacts {
@@ -124,38 +169,10 @@
     display: flex;
     justify-content: flex-start;
     width: 362px;
+    margin-top: 35px;
   }
   &__btn {
-    display: block;
-    margin-top: 35px;
-    padding: 10px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    border-radius: 5px;
-    color: #fff;
-    opacity: 0.9;
-    &:hover {
-      color: #fff;
-    }
-    svg {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      margin-left: 5px;
-    }
-    path {
-      fill: #fff;
-    }
-  }
-  &__btn--blue {
-    background: $mainColor;
-    &:hover {
-      background: transparent;
-    }
-  }
-  &__btn--transparent {
-    &:hover {
-      background: $mainColor;
-    }
+    width: 100%;
   }
 }
 
