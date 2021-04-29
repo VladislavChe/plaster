@@ -28,17 +28,18 @@
 
     /*Ripple hover btn*/
     {
-      const ANIMATEDCLASSNAME = 'animated';
-      const ELEMENTS = document.querySelectorAll('.btn');
+      const animatedClassName = 'animated';
+      const ELEMENTS = document.querySelectorAll('.HOVER');
       const ELEMENTS_SPAN = [];
 
       ELEMENTS.forEach((element, index) => {
         let addAnimation = false;
-        // Elements that contain the "FLASH" class, add a listener to remove
-        // animation-class when the animation ends
+        // On the last element in the page, add a listener to remove
+        // ---> animation-class when animation ends
         if (element.classList[1] == 'FLASH') {
+          g = element;
           element.addEventListener('animationend', (e) => {
-            element.classList.remove(ANIMATEDCLASSNAME);
+            element.classList.remove(animatedClassName);
           });
           addAnimation = true;
         }
@@ -52,7 +53,7 @@
           ELEMENTS_SPAN[index].style.top = e.pageY - element.offsetTop + 'px';
 
           // Add an animation-class to animate via CSS.
-          if (addAnimation) element.classList.add(ANIMATEDCLASSNAME);
+          if (addAnimation) element.classList.add(animatedClassName);
         });
 
         element.addEventListener('mouseout', (e) => {

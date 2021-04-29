@@ -1,44 +1,73 @@
-.btn {
+@keyframes shake {
+  25% {
+    transform: rotate(calc(var(--angle) * -1));
+  }
+
+  50% {
+    transform: rotate(var(--angle));
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.display {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 0.1em;
+  width: 480px;
+}
+
+.HOVER {
   --width: 100%;
   --time: 0.7s;
   position: relative;
   display: inline-block;
-  padding: 9px 18px;
+  height: 8em;
+  padding: 1em;
+
   color: white;
-  background: #222;
+  background: #12a89e;
   overflow: hidden;
-  border-radius: 6px;
-  text {
-    position: relative;
-    z-index: 5;
-    transition: color var(--time);
-    font-size: 14px;
-  }
-  span {
-    position: absolute;
-    display: block;
-    content: '';
-    z-index: 0;
-    width: 0;
-    height: 0;
-    border-radius: 100%;
-    background: #fff;
-    transform: translate(-50%, -50%);
-    transition: width var(--time), padding-top var(--time);
-  }
-  &:hover {
-    text {
-      color: #222;
-    }
-    span {
-      width: calc(var(--width) * 2.25);
-      padding-top: calc(var(--width) * 2.25);
-    }
-  }
-  &__icon {
-    fill: #fff;
-    width: 13px;
-    height: 13px;
-    margin-left: 8px;
-  }
+}
+
+.HOVER p {
+  position: relative;
+  z-index: 5;
+  transition: color var(--time);
+}
+
+.HOVER:hover p {
+  color: #222;
+}
+.HOVER span {
+  border-radius: 100%;
+  position: absolute;
+  display: block;
+  content: '';
+  z-index: 0;
+  width: 0;
+  height: 0;
+
+  background: #fff;
+  transform: translate(-50%, -50%);
+  transition: width var(--time), padding-top var(--time);
+}
+
+.HOVER:hover span {
+  width: calc(var(--width) * 2.25);
+  padding-top: calc(var(--width) * 2.25);
+}
+
+.HOVER.FLASH:hover p {
+  color: white;
+}
+.HOVER.FLASH span {
+  background: #ff3b3b;
+}
+
+.animated {
+  --angle: 5deg;
+  animation: shake 0.3s;
 }
