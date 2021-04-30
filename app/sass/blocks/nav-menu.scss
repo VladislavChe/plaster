@@ -163,4 +163,14 @@
       }
     }
   }
+  &__group {
+    display: flex;
+  }
+  &__group-icon {
+    width: 18px;
+    height: 18px;
+    &--dots {
+      margin-left: 20px;
+    }
+  }
 }

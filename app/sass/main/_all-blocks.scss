@@ -1,3 +1,136 @@
+.btn {
+  --width: 100%;
+  --time: 0.7s;
+  position: relative;
+  display: inline-block;
+  padding: 8px 16px;
+  color: white;
+  overflow: hidden;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid $textcolor;
+  p {
+    display: inline;
+    position: relative;
+    color: $textcolor;
+    z-index: 5;
+    transition: color var(--time);
+  }
+  span {
+    border-radius: 100%;
+    position: absolute;
+    display: block;
+    content: '';
+    z-index: 0;
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    transition: width var(--time), padding-top var(--time);
+  }
+  &:hover {
+    span {
+      width: calc(var(--width) * 2.25);
+      padding-top: calc(var(--width) * 2.25);
+    }
+  }
+  &.FLASH {
+    span {
+      background: #ff3b3b;
+    }
+    &:hover {
+      p {
+        color: white;
+      }
+    }
+  }
+  &__icon {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-left: 8px;
+    fill: $textcolor;
+    transition: all 0.5s ease;
+  }
+
+  &--blue {
+    display: inline-block;
+    .btn {
+      p {
+        color: #fff;
+      }
+      .btn__icon {
+        fill: #fff;
+      }
+      border: none;
+      background: rgba(40, 118, 226, 1);
+      background: -moz-linear-gradient(
+        left,
+        rgba(40, 118, 226, 1) 0%,
+        rgba(62, 141, 251, 1) 100%
+      );
+      background: -webkit-gradient(
+        left top,
+        right top,
+        color-stop(0%, rgba(40, 118, 226, 1)),
+        color-stop(100%, rgba(62, 141, 251, 1))
+      );
+      background: -webkit-linear-gradient(
+        left,
+        rgba(40, 118, 226, 1) 0%,
+        rgba(62, 141, 251, 1) 100%
+      );
+      background: -o-linear-gradient(
+        left,
+        rgba(40, 118, 226, 1) 0%,
+        rgba(62, 141, 251, 1) 100%
+      );
+      background: -ms-linear-gradient(
+        left,
+        rgba(40, 118, 226, 1) 0%,
+        rgba(62, 141, 251, 1) 100%
+      );
+      background: linear-gradient(
+        to right,
+        rgba(40, 118, 226, 1) 0%,
+        rgba(62, 141, 251, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2876e2', endColorstr='#3e8dfb', GradientType=1 );
+    }
+    span {
+      background: #2876e2;
+    }
+  }
+  &--black {
+    display: inline-block;
+    margin-left: 20px;
+    .btn {
+      border: 1px solid #fff;
+      p {
+        color: #fff;
+      }
+      .btn__icon {
+        fill: #fff;
+      }
+      &:hover {
+        p {
+          color: #fff;
+        }
+        .btn__icon {
+          fill: #fff;
+        }
+      }
+    }
+    span {
+      background: $textcolor;
+    }
+  }
+}
+
+.animated {
+  --angle: 5deg;
+  animation: shake 0.3s;
+}
+
 @keyframes shake {
   25% {
     transform: rotate(calc(var(--angle) * -1));
@@ -10,66 +143,6 @@
   100% {
     transform: rotate(0deg);
   }
-}
-
-.display {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 0.1em;
-  width: 480px;
-}
-
-.HOVER {
-  --width: 100%;
-  --time: 0.7s;
-  position: relative;
-  display: inline-block;
-  height: 8em;
-  padding: 1em;
-
-  color: white;
-  background: #12a89e;
-  overflow: hidden;
-}
-
-.HOVER p {
-  position: relative;
-  z-index: 5;
-  transition: color var(--time);
-}
-
-.HOVER:hover p {
-  color: #222;
-}
-.HOVER span {
-  border-radius: 100%;
-  position: absolute;
-  display: block;
-  content: '';
-  z-index: 0;
-  width: 0;
-  height: 0;
-
-  background: #fff;
-  transform: translate(-50%, -50%);
-  transition: width var(--time), padding-top var(--time);
-}
-
-.HOVER:hover span {
-  width: calc(var(--width) * 2.25);
-  padding-top: calc(var(--width) * 2.25);
-}
-
-.HOVER.FLASH:hover p {
-  color: white;
-}
-.HOVER.FLASH span {
-  background: #ff3b3b;
-}
-
-.animated {
-  --angle: 5deg;
-  animation: shake 0.3s;
 }
 
 .contacts-line {
@@ -133,6 +206,62 @@
     }
   }
 }
+
+/*Button Toggle Sidebar-Start*/
+.hamburger {
+  display: flex;
+  width: 24px;
+  height: 18px;
+  justify-content: center;
+  align-items: center;
+}
+.hamburger__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.hamburger__menu {
+  width: 100%;
+  height: 2px;
+  background-color: $textcolor;
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $textcolor;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+}
+.hamburger__menu.hamburger__menu--active {
+  background-color: transparent;
+  &::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+  &::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+}
+/*Button Toggle Sidebar-End*/
+/*Side bar - End*/
 
 .index-header {
   &__top-contacts {
@@ -356,6 +485,16 @@
       }
     }
   }
+  &__group {
+    display: flex;
+  }
+  &__group-icon {
+    width: 18px;
+    height: 18px;
+    &--dots {
+      margin-left: 20px;
+    }
+  }
 }
 
 .our-services {
@@ -373,6 +512,13 @@
       font-size: 40px;
       font-weight: bold;
       text-transform: none;
+    }
+  }
+  &__btn {
+    margin-top: 50px;
+    text-align: center;
+    .btn {
+      width: 240px;
     }
   }
 }

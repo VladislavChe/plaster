@@ -29,7 +29,7 @@
     /*Ripple hover btn*/
     {
       const animatedClassName = 'animated';
-      const ELEMENTS = document.querySelectorAll('.HOVER');
+      const ELEMENTS = document.querySelectorAll('.btn');
       const ELEMENTS_SPAN = [];
 
       ELEMENTS.forEach((element, index) => {
