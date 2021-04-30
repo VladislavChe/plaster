@@ -1,3 +1,16 @@
+/*Open hamburger-menu Start*/
+{
+  const gamburger = document.querySelector('.hamburger'),
+    gamburgerMenu = document.querySelector('.hamburger__menu');
+  nav = document.querySelector('.nav-menu__list-wrapp');
+
+  gamburger.addEventListener('click', function () {
+    nav.classList.toggle('nav-menu__list-wrapp--active');
+    gamburgerMenu.classList.toggle('hamburger__menu--active');
+  });
+}
+/*Open hamburger-menu End*/
+
 /*index.html*/
 {
   const index = document.getElementsByClassName('.index-header');

@@ -650,11 +650,9 @@ li {
     width: 100%;
     height: 2px;
     background-color: #303036;
-    -webkit-transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
-    transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
-    -o-transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
-    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
-    transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in; }
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
   .hamburger__menu::before {
     top: 0; }
   .hamburger__menu::after {
@@ -663,25 +661,23 @@ li {
 .hamburger__menu.hamburger__menu--active {
   background-color: transparent; }
   .hamburger__menu.hamburger__menu--active::before {
+    top: 50%;
+    margin-top: -1px;
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
-    top: 0;
-    -webkit-transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
-    transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
-    -o-transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
-    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
-    transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s; }
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
   .hamburger__menu.hamburger__menu--active::after {
+    bottom: 50%;
+    margin-bottom: -1px;
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
-    top: 0;
-    -webkit-transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
-    transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
-    -o-transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
-    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
-    transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s; }
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
 
 /*Button Toggle Sidebar-End*/
 /*Side bar - End*/
@@ -755,6 +751,24 @@ li {
     font-size: 19px;
     color: #303036;
     font-weight: bold; }
+  .nav-menu__list-wrapp {
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
+    @media only screen and (max-width: 992px) {
+      .nav-menu__list-wrapp {
+        position: relative;
+        min-height: 100vh;
+        background: #fff;
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: -150%;
+        width: 100%;
+        max-width: 320px;
+        font-size: 16px; }
+        .nav-menu__list-wrapp--active {
+          left: 0; } }
   .nav-menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -765,6 +779,10 @@ li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    @media only screen and (max-width: 992px) {
+      .nav-menu__list {
+        display: block;
+        background: #f0f4f8; } }
   .nav-menu__item {
     position: relative;
     margin-right: 50px;
@@ -789,6 +807,12 @@ li {
       -webkit-transition: all 0.2s ease-in;
       -o-transition: all 0.2s ease-in;
       transition: all 0.2s ease-in; }
+    @media only screen and (max-width: 992px) {
+      .nav-menu__item {
+        height: 50px;
+        padding: 0 0 0 20px;
+        margin-right: 0px;
+        border-bottom: 1px solid #fff; } }
   .nav-menu__link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -827,6 +851,30 @@ li {
       -o-transition: all 0.4s;
       transition: all 0.4s;
       color: #32a3ff; }
+    @media only screen and (max-width: 992px) {
+      .nav-menu__link {
+        line-height: 50px;
+        white-space: nowrap;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
+  @media only screen and (max-width: 992px) {
+    .nav-menu__wrapp-img {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-left: 1px solid #fff; } }
   .nav-menu__sub-list {
     position: absolute;
     top: 40px;
