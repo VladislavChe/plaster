@@ -16,7 +16,9 @@
               a(class="nav-menu__link" href="#" data-title="Home") 
                 span Home
                 img(src="img/src/up.svg", alt="arrow")
-              ul.nav-menu__sub-list 
+              .nav-menu__wrapp-img
+                +icon('arrow-down', 'nav-menu__icon')
+            ul.nav-menu__sub-list 
                 li.nav-menu__sub-item
                   a(class="nav-menu__sub-link" href="#" data-name="Home 1") 
                     span Home 1
@@ -29,14 +31,14 @@
                 li.nav-menu__sub-item
                   a(class="nav-menu__sub-link" href="#" data-name="Home 4") 
                     span Home 4
-            .nav-menu__wrapp-img
-              +icon('arrow-down', 'nav-menu__icon')
           li.nav-menu__item
-            a(class="nav-menu__link" href="#" data-title="Services") 
-              span Services 
-              .nav-menu__wrapp-img
+            .nav-menu__link-wrapp
+              a(class="nav-menu__link" href="#" data-title="Services") 
+                span Services
                 img(src="img/src/up.svg", alt="arrow")
-              ul.nav-menu__sub-list 
+              .nav-menu__wrapp-img
+                +icon('arrow-down', 'nav-menu__icon')
+            ul.nav-menu__sub-list 
                 li.nav-menu__sub-item
                   a(class="nav-menu__sub-link" href="#" data-name="Services 1") 
                     span Services 1
@@ -50,11 +52,13 @@
                   a(class="nav-menu__sub-link" href="#" data-name="Services 4") 
                     span Services 4
           li.nav-menu__item
-            a(class="nav-menu__link" href="#" data-title="Gallery") 
-              span Gallery
-              .nav-menu__wrapp-img
+            .nav-menu__link-wrapp
+              a(class="nav-menu__link" href="#" data-title="Gallery") 
+                span Gallery
                 img(src="img/src/up.svg", alt="arrow")
-              ul.nav-menu__sub-list 
+              .nav-menu__wrapp-img
+                +icon('arrow-down', 'nav-menu__icon')
+            ul.nav-menu__sub-list 
                 li.nav-menu__sub-item
                   a(class="nav-menu__sub-link" href="#" data-name="Gallery 1") 
                     span Gallery 1
@@ -68,17 +72,19 @@
                   a(class="nav-menu__sub-link" href="#" data-name="Gallery 4") 
                     span Gallery 4
           li.nav-menu__item
-            a(class="nav-menu__link" href="#" data-title="Contacts") 
-              span Contacts
-              .nav-menu__wrapp-img
+            .nav-menu__link-wrapp
+              a(class="nav-menu__link" href="#" data-title="Contacts") 
+                span Contacts
                 img(src="img/src/up.svg", alt="arrow")
-              ul.nav-menu__sub-list 
+              .nav-menu__wrapp-img
+                +icon('arrow-down', 'nav-menu__icon')
+            ul.nav-menu__sub-list 
                 li.nav-menu__sub-item
                   a(class="nav-menu__sub-link" href="#" data-name="Contacts 1") 
                     span Contacts 1
                 li.nav-menu__sub-item
                   a(class="nav-menu__sub-link" href="#" data-name="Contacts 2") 
-                    span Contacts 2    
+                    span Contacts 2
     .col-lg-3.d-none.d-lg-block 
       label(class="nav-menu__search-label" for="search-bar")
         input(type="text")
