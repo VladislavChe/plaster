@@ -14,6 +14,7 @@
 /*Open hamburger-menu End*/
 /*Nav-menu Start*/
 {
+  /*Mobile-menu Start*/
   const list = document.querySelectorAll('.nav-menu__item');
   const listBtn = document.querySelectorAll('.nav-menu__wrapp-img');
 
@@ -34,6 +35,16 @@
       }
     });
   });
+  /*Mobile-menu End*/
+  /*Menu-group Start*/
+  const groupIcon = document.querySelectorAll('.nav-menu__group-icon');
+
+  groupIcon.forEach((icon) => {
+    icon.addEventListener('click', function () {
+      icon.classList.toggle('nav-menu__group-icon--active');
+    });
+  });
+  /*Menu-group End*/
 }
 /*Nav-menu End*/
 /*index.html*/

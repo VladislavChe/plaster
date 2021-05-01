@@ -50,22 +50,14 @@
       <div class="container"> 
         <div class="nav-menu">
           <div class="row align-items-center">
-            <div class="col-lg-3 col-12 d-flex justify-content-between align-items-center">
+            <div class="col-6 nav-menu__order1 col-lg-3 d-flex justify-content-between align-items-center">
               <div class="hamburger d-lg-none">
                 <button class="hamburger__wrapper">
                   <div class="hamburger__menu"></div>
                 </button>
               </div><a class="nav-menu__logo" href="#"><img src="img/src/logo.png" alt="logo"><span>PlasterSoft</span></a>
-              <div class="nav-menu__group d-lg-none">
-                <svg class="svg-icon nav-menu__group-icon">
-                  <use xlink:href="img/svg/symbol/sprite.svg#search"></use>
-                </svg>
-                <svg class="svg-icon nav-menu__group-icon nav-menu__group-icon--dots">
-                  <use xlink:href="img/svg/symbol/sprite.svg#dots-vertical"></use>
-                </svg>
-              </div>
             </div>
-            <div class="col-lg-6"> 
+            <div class="col-12 nav-menu__order3 col-lg-6"> 
               <div class="nav-menu__list-wrapp">
                 <ul class="nav-menu__list"> 
                   <li class="nav-menu__item">
@@ -129,11 +121,21 @@
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 d-none d-lg-block"> 
-              <label class="nav-menu__search-label" for="search-bar">
-                <input type="text"><span class="nav-menu__search-icon"><?xml version="1.0" encoding="utf-8"?>
-<svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg></span>
+            <div class="col-6 nav-menu__order2 col-lg-3"> 
+              <label class="nav-menu__search-label d-none d-lg-block" for="search-bar">
+                <input type="text"><span class="nav-menu__search-icon">
+                  <svg class="svg-icon nav-menu__group-icon nav-menu__group-icon--search">
+                    <use xlink:href="img/svg/symbol/sprite.svg#search"></use>
+                  </svg></span>
               </label>
+              <div class="nav-menu__group d-lg-none">
+                <svg class="svg-icon nav-menu__group-icon nav-menu__group-icon--search">
+                  <use xlink:href="img/svg/symbol/sprite.svg#search"></use>
+                </svg>
+                <svg class="svg-icon nav-menu__group-icon nav-menu__group-icon--dots">
+                  <use xlink:href="img/svg/symbol/sprite.svg#dots-vertical"></use>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -147,24 +149,25 @@
               <div class="index-header__offer">
                 <h1 class="index-header__title">IT Solution for Your Business</h1>
                 <p class="index-header__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo ad, exercitationem laudantium doloremque dolorum commodi ut fugiat eius ex odio maxime deleniti nostrum, hec.</p>
-                <div class="index-header__buttons"></div>
               </div>
             </div>
           </div>
-          <div class="btn--blue"><a class="btn"><span></span>
-              <p>UI elements</p>
-              <p> 
-                <svg class="svg-icon btn__icon">
-                  <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
-                </svg>
-              </p></a></div>
-          <div class="btn--black"><a class="btn"><span></span>
-              <p>UI elements</p>
-              <p> 
-                <svg class="svg-icon btn__icon">
-                  <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
-                </svg>
-              </p></a></div>
+          <div class="index-header__buttons">
+            <div class="btn--blue"><a class="btn"><span></span>
+                <p>UI elements</p>
+                <p> 
+                  <svg class="svg-icon btn__icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                  </svg>
+                </p></a></div>
+            <div class="btn--black"><a class="btn"><span></span>
+                <p>UI elements</p>
+                <p> 
+                  <svg class="svg-icon btn__icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                  </svg>
+                </p></a></div>
+          </div>
         </div>
       </div>
     </div>

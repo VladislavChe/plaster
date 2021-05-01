@@ -1,6 +1,9 @@
 .nav-menu {
   background-color: #fff;
   &__logo {
+    @include media(991px) {
+      margin-right: -95px;
+    }
     img {
       width: 50px;
       height: 50px;
@@ -22,7 +25,7 @@
       display: block;
       position: absolute;
       top: 15px;
-      left: -150%;
+      left: -322px;
       width: 100%;
       max-width: 320px;
       font-size: 16px;
@@ -88,6 +91,10 @@
         .nav-menu__icon {
           fill: #fff;
           transform: rotate(180deg);
+        }
+        .nav-menu__sub-list {
+          visibility: visible;
+          opacity: 1;
         }
       }
       &:first-child {
@@ -170,8 +177,8 @@
     @include media(991px) {
       position: static;
       padding: 25px 0;
-      visibility: visible;
-      opacity: 1;
+      visibility: hidden;
+      opacity: 0;
       box-shadow: none;
     }
   }
@@ -230,6 +237,11 @@
     margin-bottom: 0;
     width: 200px;
     margin-left: auto;
+    &:hover {
+      .nav-menu__group-icon--search {
+        fill: $mainColor;
+      }
+    }
     input {
       padding: 0 15px;
       border-radius: 25px;
@@ -242,6 +254,9 @@
       &:hover {
         box-shadow: 0 2px 8px 1px rgba(64, 60, 67, 0.24);
         border-color: rgba(223, 225, 229, 0);
+        .nav-menu__group-icon--search {
+          fill: $mainColor;
+        }
       }
     }
     span {
@@ -266,12 +281,36 @@
   }
   &__group {
     display: flex;
+    @include media(991px) {
+      width: 56px;
+      margin-left: auto;
+    }
   }
   &__group-icon {
     width: 18px;
     height: 18px;
+    cursor: pointer;
+    transition: $time;
+    &:hover {
+      fill: $mainColor;
+    }
     &--dots {
       margin-left: 20px;
+    }
+  }
+  &__order1 {
+    @include media(991px) {
+      order: 1;
+    }
+  }
+  &__order2 {
+    @include media(991px) {
+      order: 2;
+    }
+  }
+  &__order3 {
+    @include media(991px) {
+      order: 3;
     }
   }
 }
