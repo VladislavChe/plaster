@@ -15,7 +15,7 @@
   }
   &__list-wrapp {
     transition: $time;
-    @include media(992px) {
+    @include media(991px) {
       position: relative;
       min-height: 100vh;
       background: #fff;
@@ -35,7 +35,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include media(992px) {
+    @include media(991px) {
       display: block;
       background: #f0f4f8;
     }
@@ -47,29 +47,47 @@
     &:last-child {
       margin-right: 0;
     }
-    &:hover {
-      .nav-menu__link {
-        span {
-          transform: translateY(100%);
+    @include minmedia(991px) {
+      &:hover {
+        .nav-menu__link {
+          span {
+            transform: translateY(100%);
+          }
+          img {
+            transform: rotate(0deg);
+          }
+          &::after {
+            transform: translateY(0);
+          }
         }
-        img {
-          transform: rotate(0deg);
+        .nav-menu__sub-list {
+          visibility: visible;
+          opacity: 1;
+          transition: all 0.2s ease-in;
         }
-        &::after {
-          transform: translateY(0);
-        }
-      }
-      .nav-menu__sub-list {
-        visibility: visible;
-        opacity: 1;
-        transition: all 0.2s ease-in;
       }
     }
-    @include media(992px) {
-      height: 50px;
+    @include media(991px) {
+      display: flex;
+      justify-content: space-between;
+      max-height: 50px;
       padding: 0 0 0 20px;
       margin-right: 0px;
       border-bottom: 1px solid #fff;
+      overflow: hidden;
+      transition: $time;
+      &--active {
+        max-height: 500px;
+        .nav-menu__icon {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+  &__link-wrapp {
+    @include media(991px) {
+      min-width: 83%;
+      width: 83%;
     }
   }
   &__link {
@@ -88,6 +106,10 @@
       width: 15px;
       height: 15px;
       transform: rotate(180deg);
+      transition: $time;
+      @include media(991px) {
+        display: none;
+      }
     }
     &::after {
       content: attr(data-title);
@@ -99,7 +121,7 @@
       transition: all 0.4s;
       color: $mainColor;
     }
-    @include media(992px) {
+    @include media(991px) {
       line-height: 50px;
       white-space: nowrap;
       display: flex;
@@ -107,14 +129,18 @@
     }
   }
   &__wrapp-img {
-    @include media(992px) {
+    @include media(991px) {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 50px;
+      min-width: 17%;
       height: 50px;
       border-left: 1px solid #fff;
     }
+  }
+  &__icon {
+    width: 12px;
+    height: 12px;
   }
   &__sub-list {
     position: absolute;
@@ -127,19 +153,27 @@
     visibility: hidden;
     opacity: 0;
     transition: all 0.2s ease-in;
+    @include media(991px) {
+      position: static;
+      visibility: visible;
+      opacity: 1;
+      box-shadow: none;
+    }
   }
   &__sub-item {
     position: relative;
     margin: 20px 0;
     overflow: hidden;
-    &:hover {
-      .nav-menu__sub-link {
-        span {
-          transform: translateY(100%);
-        }
+    @include minmedia(991px) {
+      &:hover {
+        .nav-menu__sub-link {
+          span {
+            transform: translateY(100%);
+          }
 
-        &::after {
-          transform: translateY(0);
+          &::after {
+            transform: translateY(0);
+          }
         }
       }
     }

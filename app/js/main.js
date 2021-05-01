@@ -1,16 +1,41 @@
 /*Open hamburger-menu Start*/
 {
   const gamburger = document.querySelector('.hamburger'),
-    gamburgerMenu = document.querySelector('.hamburger__menu');
-  nav = document.querySelector('.nav-menu__list-wrapp');
+    gamburgerMenu = document.querySelector('.hamburger__menu'),
+    overlay = document.querySelector('.index-header__overlay'),
+    nav = document.querySelector('.nav-menu__list-wrapp');
 
   gamburger.addEventListener('click', function () {
     nav.classList.toggle('nav-menu__list-wrapp--active');
     gamburgerMenu.classList.toggle('hamburger__menu--active');
+    overlay.classList.toggle('index-header__overlay--active');
   });
 }
 /*Open hamburger-menu End*/
+/*Nav-menu Start*/
+{
+  const list = document.querySelectorAll('.nav-menu__item');
+  const listBtn = document.querySelectorAll('.nav-menu__wrapp-img');
 
+  list.forEach((item) => {
+    // Remove class 'products__item--active'
+    function removeClass() {
+      list.forEach((el) => {
+        el.classList.remove('nav-menu__item--active');
+      });
+    }
+    // Click
+    item.addEventListener('click', () => {
+      if (item.classList.contains('nav-menu__item--active')) {
+        item.classList.remove('nav-menu__item--active');
+      } else {
+        removeClass();
+        item.classList.add('nav-menu__item--active');
+      }
+    });
+  });
+}
+/*Nav-menu End*/
 /*index.html*/
 {
   const index = document.getElementsByClassName('.index-header');
