@@ -18,9 +18,32 @@
   <!-- CSS styles-->
   <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+  <div class="popup">
+    <div class="popup__form-wrapp" id="form-wrapp">
+      <h4 class="popup__title">We will call you</h4>
+      <form class="popup__form" action="#" method="post">
+        <div class="popup__wrapp-input">
+          <input class="popup__input" name="name" type="text" placeholder="Your name" required>
+        </div>
+        <div class="popup__wrapp-input">
+          <input class="popup__input" name="phone" type="tel" data-action="phone" placeholder="Your phone" required>
+        </div>
+        <label class="popup__checkbox" for="popup__checkbox"> 
+          <input class="popup__checkbox-input" id="popup__checkbox" type="checkbox" required><span class="popup__real-checkbox"></span>
+          <p class="popup__checkbox-text">I agree to the transfer of personal data in accordance with the  <a href="#">Privacy Policy</a></p>
+        </label>
+        <div class="btn--blue">
+          <button class="btn" type="submit"><span></span>
+            <p>Waiting for a Сall</p>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
   <header class="index-header">
     <div class="index-header__overlay"></div>
     <div class="index-header__top-contacts">
@@ -55,7 +78,7 @@
                     <svg class="svg-icon contacts-line__icon">
                       <use xlink:href="img/svg/symbol/sprite.svg#twitter"></use>
                     </svg></a></li>
-              </ul><a class="contacts-line__callback" href="#">
+              </ul><a class="contacts-line__callback" href="#form-wrapp">
                 <svg class="svg-icon contacts-line__icon">
                   <use xlink:href="img/svg/symbol/sprite.svg#call-back"></use>
                 </svg><span>Callback</span></a>
@@ -310,4 +333,5 @@
   </div>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/jQuery.main.js"></script>
 </body>

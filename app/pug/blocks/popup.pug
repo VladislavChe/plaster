@@ -1,0 +1,16 @@
+.popup
+  #form-wrapp.popup__form-wrapp
+    h4.popup__title We will call you
+    form(class="popup__form" action="#" method="post")
+      .popup__wrapp-input
+        input(name="name" type="text" class="popup__input" placeholder="Your name" required)
+      .popup__wrapp-input
+        input(name="phone" type="tel" class="popup__input" data-action="phone" placeholder="Your phone" required)
+      label(class="popup__checkbox" for="popup__checkbox") 
+        input(
+         id="popup__checkbox" class="popup__checkbox-input" type="checkbox" required)
+        span.popup__real-checkbox
+        p.popup__checkbox-text I agree to the transfer of personal data in accordance with the  
+          a(href="#") Privacy Policy
+      .btn--blue
+        include ../blocks/btn-button
