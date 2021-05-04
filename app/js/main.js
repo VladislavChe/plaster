@@ -36,6 +36,7 @@
     });
   });
   /*Mobile-menu End*/
+
   /*Menu-group Start*/
   /*Menu-group Search Start*/
   const searchIcon = document.querySelector('.nav-menu__group-icon--search'),
@@ -53,6 +54,14 @@
     searchLabel.classList.toggle('nav-menu__search-label--active');
   });
   /*Menu-group Search End*/
+  /*Menu-group Dots Start*/
+  const dotsIcon = document.querySelector('.nav-menu__group-icon--dots'),
+    groupMenu = document.querySelector('.nav-menu__group-menu');
+
+  dotsIcon.addEventListener('click', function () {
+    groupMenu.classList.toggle('nav-menu__group-menu--active');
+  });
+  /*Menu-group Dots End*/
   /*Menu-group End*/
 }
 /*Nav-menu End*/

@@ -93,7 +93,31 @@
         +icon('cancel', 'nav-menu__group-icon', 'nav-menu__group-icon--cancel')
         +icon('dots-vertical', 'nav-menu__group-icon', 'nav-menu__group-icon--dots')
         ul.nav-menu__group-menu
-          li
-            a(href="#") 
+          li.nav-menu__group-menu-item
+            a(href="mailto:mail@example.com" class="nav-menu__group-menu-link")
+              +icon('mail', 'nav-menu__group-menu-icon')
+              span mail@example.com 
+          li.nav-menu__group-menu-item
+            a(href="tel:+78003001020" class="nav-menu__group-menu-link") 
+              +icon('phone', 'nav-menu__group-menu-icon')
+              span 8 800 312 11 51 
+          li.nav-menu__group-menu-item
+            a(href="#" class="nav-menu__group-menu-link") 
+              +icon('call-back', 'nav-menu__group-menu-icon')
+              span Callback
+          li.nav-menu__group-menu-item
+            ul.nav-menu__group-sub-menu
+              li.nav-menu__group-sub-menu-item 
+                a(href="http://", target="_blank", title="facebook" class="nav-menu__group-sub-menu-link") 
+                  +icon('facebook-f', 'nav-menu__group-menu-icon')
+              li.nav-menu__group-sub-menu 
+                a(href="http://", target="_blank", title="instagram" class="nav-menu__group-sub-menu-link") 
+                  +icon('instagram', 'nav-menu__group-menu-icon')
+              li.nav-menu__group-sub-menu 
+                a(href="http://", target="_blank", title="linkedin" class="nav-menu__group-sub-menu-link") 
+                  +icon('linkedin', 'nav-menu__group-menu-icon')
+              li.nav-menu__group-sub-menu 
+                a(href="http://", target="_blank", title="twitter" class="nav-menu__group-sub-menu-link") 
+                  +icon('twitter', 'nav-menu__group-menu-icon nav-menu__group-menu-icon--twitter')
 // nav-menu End
     
