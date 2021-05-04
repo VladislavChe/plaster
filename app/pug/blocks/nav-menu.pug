@@ -84,12 +84,13 @@
                   a(class="nav-menu__sub-link" href="#" data-name="Contacts 2") 
                     span Contacts 2
     .col-6.nav-menu__order2.col-lg-3 
-      label(class="nav-menu__search-label d-none d-lg-block" for="search-bar")
+      label(class="nav-menu__search-label" for="search-bar")
         input(type="text")
         span.nav-menu__search-icon
-          +icon('search', 'nav-menu__group-icon', 'nav-menu__group-icon--search')
+          +icon('search', 'nav-menu__group-icon', 'nav-menu__group-icon--input-search')
       .nav-menu__group.d-lg-none
         +icon('search', 'nav-menu__group-icon', 'nav-menu__group-icon--search')
+        +icon('cancel', 'nav-menu__group-icon', 'nav-menu__group-icon--cancel')
         +icon('dots-vertical', 'nav-menu__group-icon', 'nav-menu__group-icon--dots')
 // nav-menu End
     

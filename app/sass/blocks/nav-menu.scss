@@ -237,6 +237,18 @@
     margin-bottom: 0;
     width: 200px;
     margin-left: auto;
+    @include media(991px) {
+      display: none;
+    }
+    &--active {
+      @include media(991px) {
+        position: absolute;
+        top: -100%;
+        left: -50%;
+        display: block;
+        width: 100%;
+      }
+    }
     &:hover {
       .nav-menu__group-icon--search {
         fill: $mainColor;
@@ -257,6 +269,10 @@
         .nav-menu__group-icon--search {
           fill: $mainColor;
         }
+      }
+      @include media(991px) {
+        width: 100%;
+        line-height: 50px;
       }
     }
     span {
@@ -296,6 +312,18 @@
     }
     &--dots {
       margin-left: 20px;
+    }
+    &--search {
+      display: block;
+      &--active {
+        display: none;
+      }
+    }
+    &--cancel {
+      display: none;
+      &--active {
+        display: block;
+      }
     }
   }
   &__order1 {

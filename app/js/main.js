@@ -37,13 +37,22 @@
   });
   /*Mobile-menu End*/
   /*Menu-group Start*/
-  const groupIcon = document.querySelectorAll('.nav-menu__group-icon');
+  /*Menu-group Search Start*/
+  const searchIcon = document.querySelector('.nav-menu__group-icon--search'),
+    cancelIcon = document.querySelector('.nav-menu__group-icon--cancel'),
+    searchLabel = document.querySelector('.nav-menu__search-label');
 
-  groupIcon.forEach((icon) => {
-    icon.addEventListener('click', function () {
-      icon.classList.toggle('nav-menu__group-icon--active');
-    });
+  searchIcon.addEventListener('click', function () {
+    searchIcon.classList.toggle('nav-menu__group-icon--search--active');
+    cancelIcon.classList.toggle('nav-menu__group-icon--cancel--active');
+    searchLabel.classList.toggle('nav-menu__search-label--active');
   });
+  cancelIcon.addEventListener('click', function () {
+    searchIcon.classList.toggle('nav-menu__group-icon--search--active');
+    cancelIcon.classList.toggle('nav-menu__group-icon--cancel--active');
+    searchLabel.classList.toggle('nav-menu__search-label--active');
+  });
+  /*Menu-group Search End*/
   /*Menu-group End*/
 }
 /*Nav-menu End*/
