@@ -1,22 +1,36 @@
-/*Open hamburger-menu Start*/
+/* Hamburger-menu Start*/
 {
-  const gamburger = document.querySelector('.hamburger'),
-    gamburgerMenu = document.querySelector('.hamburger__menu'),
-    overlay = document.querySelector('.index-header__overlay'),
-    nav = document.querySelector('.nav-menu__list-wrapp');
+  const gamburger = document.querySelector('.hamburger'), // hamburger
+    gamburgerMenu = document.querySelector('.hamburger__menu'), // hamburger-before-after
+    overlay = document.querySelector('.index-header__overlay'), // overlay
+    nav = document.querySelector('.nav-menu__list-wrapp'); // nav-bar-menu
 
-  gamburger.addEventListener('click', function () {
+  // Open - Close nav-bar-menu
+  gamburger.addEventListener('click', function (e) {
     nav.classList.toggle('nav-menu__list-wrapp--active');
     gamburgerMenu.classList.toggle('hamburger__menu--active');
     overlay.classList.toggle('index-header__overlay--active');
   });
+
+  // click outside the nav-bar-menu
+  window.addEventListener('click', function (e) {
+    const target = e.target; // находим элемент, на котором был клик
+    if (
+      !target.closest('.hamburger') &&
+      !target.closest('.nav-menu__list-wrapp')
+    ) {
+      // если этот элемент или его родительские элементы не окно навигации и не кнопка
+      nav.classList.remove('nav-menu__list-wrapp--active'); // то закрываем окно навигации, удаляя активный класс
+      gamburgerMenu.classList.remove('hamburger__menu--active'); // то трансформируем hamburger в исходный вид
+      overlay.classList.remove('index-header__overlay--active'); // то закрываем overlay, удаляя активный класс
+    }
+  });
 }
-/*Open hamburger-menu End*/
-/*Nav-menu Start*/
+/*Hamburger-menu End*/
+
+/*Nav-bar-menu Start*/
 {
-  /*Mobile-menu Start*/
   const list = document.querySelectorAll('.nav-menu__item');
-  const listBtn = document.querySelectorAll('.nav-menu__wrapp-img');
 
   list.forEach((item) => {
     // Remove class 'products__item--active'
@@ -35,9 +49,11 @@
       }
     });
   });
-  /*Mobile-menu End*/
+}
+/*Nav-bar-menu End*/
 
-  /*Menu-group Start*/
+/*Menu-group Start*/
+{
   /*Menu-group Search Start*/
   const searchIcon = document.querySelector('.nav-menu__group-icon--search'),
     cancelIcon = document.querySelector('.nav-menu__group-icon--cancel'),
@@ -53,7 +69,21 @@
     cancelIcon.classList.toggle('nav-menu__group-icon--cancel--active');
     searchLabel.classList.toggle('nav-menu__search-label--active');
   });
+
+  window.addEventListener('click', function (e) {
+    const target = e.target;
+    if (
+      !target.closest('.nav-menu__group-icon--cancel') &&
+      !target.closest('.nav-menu__group-icon--search') &&
+      !target.closest('.nav-menu__search-label')
+    ) {
+      searchIcon.classList.remove('nav-menu__group-icon--search--active');
+      cancelIcon.classList.remove('nav-menu__group-icon--cancel--active');
+      searchLabel.classList.remove('nav-menu__search-label--active');
+    }
+  });
   /*Menu-group Search End*/
+
   /*Menu-group Dots Start*/
   const dotsIcon = document.querySelector('.nav-menu__group-icon--dots'),
     groupMenu = document.querySelector('.nav-menu__group-menu');
@@ -61,10 +91,20 @@
   dotsIcon.addEventListener('click', function () {
     groupMenu.classList.toggle('nav-menu__group-menu--active');
   });
+
+  window.addEventListener('click', function (e) {
+    const target = e.target;
+    if (
+      !target.closest('.nav-menu__group-icon--dots') &&
+      !target.closest('.nav-menu__group-menu')
+    ) {
+      groupMenu.classList.remove('nav-menu__group-menu--active');
+    }
+  });
   /*Menu-group Dots End*/
-  /*Menu-group End*/
 }
-/*Nav-menu End*/
+/*Menu-group End*/
+
 /*index.html*/
 {
   const index = document.getElementsByClassName('.index-header');

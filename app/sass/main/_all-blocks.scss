@@ -236,15 +236,6 @@
   height: 18px;
   justify-content: center;
   align-items: center;
-  &:hover {
-    .hamburger__menu {
-      background-color: $mainColor;
-      &::before,
-      &::after {
-        background-color: $mainColor;
-      }
-    }
-  }
   &__wrapper {
     position: relative;
     width: 100%;
