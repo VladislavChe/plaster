@@ -551,33 +551,24 @@ li {
   padding: 10px 0; }
   .contacts-line__contacts {
     display: inline; }
-    .contacts-line__contacts a {
+    .contacts-line__contacts a span {
+      color: #fff;
+      font-size: 16px;
+      opacity: 0.8;
+      margin-left: 10px;
       -webkit-transition: 0.3s ease-in-out;
       -o-transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out; }
-      .contacts-line__contacts a svg {
-        opacity: 0.8;
-        width: 20px;
-        height: 20px;
-        margin-right: 10px; }
-      .contacts-line__contacts a path {
-        fill: white; }
-      .contacts-line__contacts a span {
-        color: white;
-        font-size: 16px;
-        opacity: 0.8; }
-      .contacts-line__contacts a:hover {
-        color: white !important;
-        -webkit-transition: 0.3s ease-in-out;
-        -o-transition: 0.3s ease-in-out;
-        transition: 0.3s ease-in-out; }
-        .contacts-line__contacts a:hover svg,
-        .contacts-line__contacts a:hover path,
-        .contacts-line__contacts a:hover span {
-          -webkit-transition: 0.3s ease-in-out;
-          -o-transition: 0.3s ease-in-out;
-          transition: 0.3s ease-in-out;
-          opacity: 1; }
+    .contacts-line__contacts a:hover span {
+      -webkit-transition: 0.3s ease-in-out;
+      -o-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+      opacity: 1; }
+    .contacts-line__contacts a:hover .contacts-line__icon {
+      -webkit-transition: 0.3s ease-in-out;
+      -o-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+      opacity: 1; }
   .contacts-line__tel {
     margin-left: 20px; }
   .contacts-line__social {
@@ -589,6 +580,8 @@ li {
             justify-content: flex-end;
     width: 120px;
     margin-left: auto; }
+    .contacts-line__social li {
+      margin-right: 10px; }
     .contacts-line__social a {
       margin-right: 10px; }
       .contacts-line__social a:last-child {
@@ -607,6 +600,30 @@ li {
           transition: 0.3s ease-in-out; }
       .contacts-line__social a path {
         fill: white; }
+  .contacts-line__callback {
+    display: inline;
+    margin-left: 50px; }
+    .contacts-line__callback:hover span,
+    .contacts-line__callback:hover .contacts-line__icon {
+      opacity: 1; }
+    .contacts-line__callback:hover span {
+      border-bottom: 1px solid #fff; }
+    .contacts-line__callback span {
+      border-bottom: 1px dashed #fff;
+      color: #fff;
+      margin-left: 5px;
+      opacity: 0.8;
+      -webkit-transition: 0.3s ease-in-out;
+      -o-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out; }
+  .contacts-line__icon {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
 
 /*Button Toggle Sidebar-Start*/
 .hamburger {

@@ -150,27 +150,19 @@
   &__contacts {
     display: inline;
     a {
-      transition: $time;
-      svg {
-        opacity: 0.8;
-        width: 20px;
-        height: 20px;
-        margin-right: 10px;
-      }
-      path {
-        fill: white;
-      }
       span {
-        color: white;
+        color: #fff;
         font-size: 16px;
         opacity: 0.8;
+        margin-left: 10px;
+        transition: $time;
       }
       &:hover {
-        color: white !important;
-        transition: $time;
-        svg,
-        path,
         span {
+          transition: $time;
+          opacity: 1;
+        }
+        .contacts-line__icon {
           transition: $time;
           opacity: 1;
         }
@@ -185,6 +177,9 @@
     justify-content: flex-end;
     width: 120px;
     margin-left: auto;
+    li {
+      margin-right: 10px;
+    }
     a {
       margin-right: 10px;
       &:last-child {
@@ -204,6 +199,33 @@
         fill: white;
       }
     }
+  }
+  &__callback {
+    display: inline;
+    margin-left: 50px;
+    &:hover {
+      span,
+      .contacts-line__icon {
+        opacity: 1;
+      }
+      span {
+        border-bottom: 1px solid #fff;
+      }
+    }
+    span {
+      border-bottom: 1px dashed #fff;
+      color: #fff;
+      margin-left: 5px;
+      opacity: 0.8;
+      transition: $time;
+    }
+  }
+  &__icon {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    transition: $time;
   }
 }
 
