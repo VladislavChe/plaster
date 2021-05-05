@@ -43,10 +43,12 @@ h6 {
 }
 
 h1 {
-  font-size: 40px;
-  @include media(992px) {
+  font-size: 45px;
+  @include media(991px) {
     font-size: 35px;
   }
+}
+h2 {
 }
 
 h4 {

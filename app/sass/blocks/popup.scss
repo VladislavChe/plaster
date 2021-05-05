@@ -1,6 +1,7 @@
 .popup {
   display: none;
   &__form-wrapp {
+    position: relative;
     margin: auto;
     max-width: 418px;
     padding: 2.5rem 2.85rem;
@@ -198,4 +199,9 @@
 
 .mfp-close {
   color: $textcolor !important;
+  font-size: 35px;
+  &:hover {
+    transform: rotate(90deg);
+    color: $mainColor !important;
+  }
 }

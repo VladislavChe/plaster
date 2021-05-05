@@ -365,6 +365,13 @@
   }
   &__buttons {
     text-align: center;
+    @include media(577px) {
+      .btn--black {
+        display: block;
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
   }
 }
 
@@ -770,6 +777,9 @@
       font-size: 40px;
       font-weight: bold;
       text-transform: none;
+      @include media(991px) {
+        font-size: 30px;
+      }
     }
   }
   &__btn {
@@ -784,6 +794,7 @@
 .popup {
   display: none;
   &__form-wrapp {
+    position: relative;
     margin: auto;
     max-width: 418px;
     padding: 2.5rem 2.85rem;
@@ -981,6 +992,11 @@
 
 .mfp-close {
   color: $textcolor !important;
+  font-size: 35px;
+  &:hover {
+    transform: rotate(90deg);
+    color: $mainColor !important;
+  }
 }
 
 .services-card {
@@ -989,6 +1005,10 @@
   padding: 24px;
   border-radius: 10px;
   transition: $time;
+  @include media(767px) {
+    max-width: 510px;
+    margin: 0 auto;
+  }
   &::after {
     content: '';
     position: absolute;
