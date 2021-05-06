@@ -4,32 +4,37 @@ include ../tools/_mixin
 doctype html
 head
   meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
 
+  // Title
   block title
-  
-  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-  meta(name='description' content='Portfolio frontend developer')
-  meta(name='keywords' content='portfolio, frontend, developer, web, web-developer, верстка, создание сайта, разработчик сайтов.')
+  // /Title
+
   // Favicon
   <link rel="icon" href="img/src/favicon.ico" type="image/x-icon">
+  // /Favicon
   // OG Tags
+  meta(name='description' content='Portfolio frontend developer')
+  meta(name='keywords' content='portfolio, frontend, developer, web, web-developer, верстка, создание сайта, разработчик сайтов.')
   meta(property='og:title' content='Portfolio frontend developer')
   meta(property='og:description' content='portfolio, frontend, developer, web, web-developer, верстка, создание сайта, разработчик сайтов.')
   meta(property='og:type' content='article')
   meta(property='og:image' content='#')
   meta(property='og:site_name' content='Portfolio frontend developer')
-  // adaptability
+  // /OG Tags
+  // Adaptability
   meta(name='viewport' content='width=device-width, initial-scale=1')
+  // /Adaptability
   // CSS styles
   block link
     link(rel='stylesheet' href='css/bootstrap-reboot.min.css')
     link(rel='stylesheet' href='css/bootstrap.min.css')
     link(rel='stylesheet' href='css/magnific-popup.css')
     link(rel='stylesheet' href='css/main.css')
+  // /CSS styles
 body
   block content
-
+  // Scripts
   block scripts
     script(src='js/main.js')
     script(src='js/jQuery.main.js')
+  // /Scripts
