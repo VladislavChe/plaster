@@ -11,7 +11,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   color: $textcolor;
-  font-size: 16px;
+  font-size: 17px;
   padding: 0;
   margin: 0;
 }
@@ -49,10 +49,18 @@ h1 {
   }
 }
 h2 {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: none;
+  @include media(991px) {
+    font-size: 30px;
+  }
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 27px;
+  font-weight: bold;
+  text-transform: none;
 }
 
 address,

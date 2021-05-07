@@ -1,10 +1,3 @@
-mixin services-card(icon, h4, text)
-  a(href="#" class="services-card")
-    .services-card__icon-wrapp
-      +icon(icon, 'services-card__icon')
-    h4.services-card__title=h4
-    p.services-card__text=text
-
 //-BEGIN svg sprite
 mixin icon(iconName, className, modific)
   if(className && !modific)
@@ -30,3 +23,18 @@ mixin icon(iconName, className, modific)
 //- }
 
 //-END svg sprite
+
+mixin services-card(icon, h4, text)
+  a(href="#" class="services-card")
+    .services-card__icon-wrapp
+      +icon(icon, 'services-card__icon')
+    h4.services-card__title=h4
+    p.services-card__text=text
+
+mixin choose-card(numb, title, text)
+  .choose-card 
+    .choose-card__number
+      span=numb
+    .choose-card__inner
+      h4=title
+      p=text

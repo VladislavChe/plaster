@@ -1,0 +1,31 @@
+.choose-card {
+  position: relative;
+  display: flex;
+  &__number {
+    margin-right: 0.3125rem;
+    span {
+      position: relative;
+      font-size: 1.0625rem;
+      font-weight: bold;
+      color: $mainColor;
+      &::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 3.25rem;
+        background-color: $textcolor;
+        top: 50%;
+        left: 130%;
+      }
+    }
+  }
+  &__inner {
+    margin-left: 3.75rem;
+    h4 {
+      margin-bottom: 1.25rem;
+    }
+    p {
+      color: #63636b;
+    }
+  }
+}

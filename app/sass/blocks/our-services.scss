@@ -9,14 +9,6 @@
     p {
       color: $mainColor;
     }
-    h2 {
-      font-size: 40px;
-      font-weight: bold;
-      text-transform: none;
-      @include media(991px) {
-        font-size: 30px;
-      }
-    }
   }
   &__btn {
     margin-top: 50px;
