@@ -1,3 +1,26 @@
+/* Nav Menu Start*/
+/*Прилипание навигационного меню*/
+{
+  window.onscroll = function () {
+    checkMarginToTop();
+  };
+  const nav = document.querySelector('.index-header__nav'),
+    content = document.querySelector('.index-header__content');
+  // создаем переменную с расстоянием над меню
+  const navOffset = nav.offsetTop;
+  // ловим событие скролла
+  function checkMarginToTop() {
+    if (window.pageYOffset > navOffset) {
+      nav.classList.add('nav-fixed');
+      content.classList.add('content-fixed');
+    } else {
+      nav.classList.remove('nav-fixed');
+      content.classList.remove('content-fixed');
+    }
+  }
+}
+/* Nav Menu End*/
+
 /* Hamburger-menu Start*/
 {
   const gamburger = document.querySelector('.hamburger'), // hamburger
@@ -112,28 +135,7 @@
   if (!index) {
     // console.log('da');
   } else {
-    /*Прилипание навигационного меню*/
-    {
-      window.onscroll = function () {
-        checkMarginToTop();
-      };
-      const nav = document.querySelector('.index-header__nav'),
-        content = document.querySelector('.index-header__content');
-      // создаем переменную с расстоянием над меню
-      const navOffset = nav.offsetTop;
-      // ловим событие скролла
-      function checkMarginToTop() {
-        if (window.pageYOffset > navOffset) {
-          nav.classList.add('nav-fixed');
-          content.classList.add('content-fixed');
-        } else {
-          nav.classList.remove('nav-fixed');
-          content.classList.remove('content-fixed');
-        }
-      }
-    }
-
-    /*Ripple hover btn*/
+    /*Ripple hover btn Start*/
     {
       const animatedClassName = 'animated';
       const ELEMENTS = document.querySelectorAll('.btn');
@@ -169,5 +171,56 @@
         });
       });
     }
+    /*Ripple hover btn End*/
+
+    /*Merit numbers Start*/
+    {
+      // Время в милисекундах
+      const time = 1000;
+      // Шаг
+      const step = 1;
+
+      function outNum(num, elem) {
+        // Получаем элемент на странице куда мы выводим числа
+        let l = document.querySelector('.' + elem);
+        // Число от которого начинается отсчет
+        let numb = 0;
+        // Количество шагов от 0 до результата
+        let count = Math.round(time / (num / step));
+        // Интервал добавления цифр
+        let interval = setInterval(() => {
+          numb += step;
+
+          if (numb == num) {
+            clearInterval(interval);
+          }
+          if (numb < 10) {
+            l.innerHTML = '0' + numb;
+          } else {
+            l.innerHTML = numb;
+          }
+        }, count);
+      }
+
+      window.onscroll = function () {
+        checkMarginToTopMerit();
+      };
+      const merit = document.querySelector('.merit');
+      // создаем переменную с расстоянием над меню
+      const meritOffset = merit.offsetTop;
+      // ловим событие скролла
+      function checkMarginToTopMerit() {
+        if (
+          window.pageYOffset > meritOffset - 400 &&
+          merit.classList.contains('merit__not-animate')
+        ) {
+          outNum(10, 'merit__years-number');
+          outNum(40, 'merit__skills-consultans');
+          outNum(160, 'merit__skills-employers');
+          merit.classList.remove('merit__not-animate');
+        }
+      }
+    }
+    /*Merit numbers End*/
   }
 }
