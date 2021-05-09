@@ -1,0 +1,136 @@
+.merit {
+  padding: 80px 0;
+  &__years {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      border-radius: 50%;
+      background: rgba(42, 120, 228, 1);
+      background: -moz-linear-gradient(
+        left,
+        rgba(42, 120, 228, 1) 0%,
+        rgba(61, 140, 250, 1) 100%
+      );
+      background: -webkit-gradient(
+        left top,
+        right top,
+        color-stop(0%, rgba(42, 120, 228, 1)),
+        color-stop(100%, rgba(61, 140, 250, 1))
+      );
+      background: -webkit-linear-gradient(
+        left,
+        rgba(42, 120, 228, 1) 0%,
+        rgba(61, 140, 250, 1) 100%
+      );
+      background: -o-linear-gradient(
+        left,
+        rgba(42, 120, 228, 1) 0%,
+        rgba(61, 140, 250, 1) 100%
+      );
+      background: -ms-linear-gradient(
+        left,
+        rgba(42, 120, 228, 1) 0%,
+        rgba(61, 140, 250, 1) 100%
+      );
+      background: linear-gradient(
+        to right,
+        rgba(42, 120, 228, 1) 0%,
+        rgba(61, 140, 250, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a78e4', endColorstr='#3d8cfa', GradientType=1 );
+    }
+    &::before {
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+    }
+    &::after {
+      top: 30%;
+      right: 0;
+      width: 34px;
+      height: 34px;
+    }
+  }
+  &__years-wrapp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 180px;
+    margin-left: 150px;
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+    }
+    &::before {
+      top: -35%;
+      left: -80%;
+      background-color: $mainColor;
+    }
+    &::after {
+      top: -22%;
+      left: -40%;
+      background-color: #fff;
+      box-shadow: 11.35px 22.275px 25.92px 1.08px rgba(14, 62, 129, 0.29);
+    }
+  }
+  &__years-number {
+    display: block;
+    line-height: 1;
+    font-weight: bold;
+    font-size: 9rem;
+    color: $mainColor;
+    z-index: 1;
+    text-align: center;
+  }
+  &__years-text {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+    &::before {
+      top: -100%;
+      left: -100%;
+      opacity: 0.1;
+    }
+    &::after {
+      top: -80%;
+      left: -80%;
+      opacity: 0.15;
+    }
+  }
+  &__skills {
+    padding-left: 100px;
+  }
+  &__skills-number {
+    font-size: 2.5rem;
+    color: $mainColor;
+    font-weight: bold;
+  }
+  &__skills-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}

@@ -827,6 +827,112 @@ li {
       margin-left: 0;
       margin-top: 20px; } }
 
+.merit {
+  padding: 80px 0; }
+  .merit__years {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 100px; }
+    .merit__years::before, .merit__years::after {
+      position: absolute;
+      content: '';
+      border-radius: 50%;
+      background: #2a78e4;
+      background: -webkit-gradient(left top, right top, color-stop(0%, #2a78e4), color-stop(100%, #3d8cfa));
+      background: -o-linear-gradient(left, #2a78e4 0%, #3d8cfa 100%);
+      background: -webkit-gradient(linear, left top, right top, from(#2a78e4), to(#3d8cfa));
+      background: linear-gradient(to right, #2a78e4 0%, #3d8cfa 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a78e4', endColorstr='#3d8cfa', GradientType=1 ); }
+    .merit__years::before {
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px; }
+    .merit__years::after {
+      top: 30%;
+      right: 0;
+      width: 34px;
+      height: 34px; }
+  .merit__years-wrapp {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 180px;
+    margin-left: 150px; }
+    .merit__years-wrapp::before, .merit__years-wrapp::after {
+      position: absolute;
+      content: '';
+      width: 320px;
+      height: 320px;
+      border-radius: 50%; }
+    .merit__years-wrapp::before {
+      top: -35%;
+      left: -80%;
+      background-color: #2c7ae7; }
+    .merit__years-wrapp::after {
+      top: -22%;
+      left: -40%;
+      background-color: #fff;
+      -webkit-box-shadow: 11.35px 22.275px 25.92px 1.08px rgba(14, 62, 129, 0.29);
+              box-shadow: 11.35px 22.275px 25.92px 1.08px rgba(14, 62, 129, 0.29); }
+  .merit__years-number {
+    display: block;
+    line-height: 1;
+    font-weight: bold;
+    font-size: 9rem;
+    color: #2c7ae7;
+    z-index: 1;
+    text-align: center; }
+  .merit__years-text {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1; }
+    .merit__years-text::before, .merit__years-text::after {
+      position: absolute;
+      content: '';
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background-color: #fff; }
+    .merit__years-text::before {
+      top: -100%;
+      left: -100%;
+      opacity: 0.1; }
+    .merit__years-text::after {
+      top: -80%;
+      left: -80%;
+      opacity: 0.15; }
+  .merit__skills {
+    padding-left: 100px; }
+  .merit__skills-number {
+    font-size: 2.5rem;
+    color: #2c7ae7;
+    font-weight: bold; }
+  .merit__skills-text {
+    font-size: 1.5rem;
+    font-weight: bold; }
+
 .nav-menu {
   background-color: #fff; }
   @media only screen and (max-width: 991px) {
