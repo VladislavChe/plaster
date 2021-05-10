@@ -3,6 +3,7 @@
 {
   window.onscroll = function () {
     checkMarginToTop();
+    checkMarginToTopMerit();
   };
   const nav = document.querySelector('.index-header__nav'),
     content = document.querySelector('.index-header__content');
@@ -202,9 +203,6 @@
         }, count);
       }
 
-      window.onscroll = function () {
-        checkMarginToTopMerit();
-      };
       const merit = document.querySelector('.merit');
       // создаем переменную с расстоянием над меню
       const meritOffset = merit.offsetTop;

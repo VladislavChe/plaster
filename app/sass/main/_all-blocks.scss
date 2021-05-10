@@ -363,7 +363,7 @@
     }
   }
   &__top-contacts {
-    background-color: #3a2e33;
+    background-color: #282725;
   }
   &__nav {
     display: flex;
@@ -388,7 +388,8 @@
   &__content {
     display: block;
     padding: 10% 0;
-    background: url(/img/src/index-header-bg.jpg) no-repeat center;
+    background: url(/img/src/index-header-bg2-overlay.jpg) no-repeat center top /
+      cover;
     &.content-fixed {
       margin-top: 80px;
     }
@@ -1212,6 +1213,145 @@
   }
 }
 
+.projects-card {
+  position: relative;
+  display: block;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 45px;
+  &:hover {
+    .projects-card__front {
+      transform: rotateY(180deg);
+      z-index: 1;
+    }
+    .projects-card__back {
+      transform: rotateY(0);
+      z-index: 2;
+    }
+  }
+  &__front,
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.6s ease-out;
+  }
+  &__front {
+    z-index: 2;
+    transform: rotateY(0);
+  }
+  &__back {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2.5rem;
+    background-color: $mainColor;
+    height: 100%;
+    transform: rotateY(180deg);
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-transform: none;
+  }
+  &__text {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+  &__link {
+    display: inline;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+    &:hover {
+      background: #f0f4f8;
+    }
+  }
+  &__icon {
+    fill: $mainColor;
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.projects {
+  background-color: $bgcolor;
+  padding: 80px 0 35px 0;
+  &__title {
+    text-align: center;
+    p {
+      color: $mainColor;
+    }
+  }
+  &__filters {
+    margin: 60px 0;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    li {
+      margin-right: 1.5rem;
+      padding: 2px 5px;
+      overflow: hidden;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        span {
+          transform: translateY(100%);
+        }
+        button {
+          &::after {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+    button {
+      position: relative;
+      border: none !important;
+      background: none !important;
+      span {
+        display: inline-block;
+        font-size: 16px;
+        color: $textcolor;
+        transform: translateY(0);
+        transition: all 0.4s;
+      }
+      &::after {
+        content: attr(data-name);
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateY(-100%);
+        width: 100%;
+        transition: all 0.4s;
+        font-size: 16px;
+        color: $mainColor;
+      }
+    }
+  }
+  &__btn {
+    margin-top: 50px;
+    text-align: center;
+    .btn {
+      width: 240px;
+    }
+  }
+}
 
 .services-card {
   position: relative;

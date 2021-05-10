@@ -24,6 +24,14 @@ mixin icon(iconName, className, modific)
 
 //-END svg sprite
 
+
+mixin btn(text)
+  a.btn
+    span
+    p=text
+    p 
+      +icon('right-arrow', 'btn__icon')
+
 mixin services-card(icon, h4, text)
   a(href="#" class="services-card")
     .services-card__icon-wrapp
@@ -38,3 +46,15 @@ mixin choose-card(numb, title, text)
     .choose-card__inner
       h4=title
       p=text
+
+mixin projects-card(img, title, text)
+  .projects-card 
+    .projects-card__front
+      img(src=img, alt="project")
+    .projects-card__back
+      h5.projects-card__title=title
+      p.projects-card__text=text
+      .projects-card__icon-wrapp
+        a(href="#" class="projects-card__link") 
+          +icon('right-arrow', 'projects-card__icon')
+          

@@ -1,0 +1,72 @@
+.projects-card {
+  position: relative;
+  display: block;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 45px;
+  &:hover {
+    .projects-card__front {
+      transform: rotateY(180deg);
+      z-index: 1;
+    }
+    .projects-card__back {
+      transform: rotateY(0);
+      z-index: 2;
+    }
+  }
+  &__front,
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.6s ease-out;
+  }
+  &__front {
+    z-index: 2;
+    transform: rotateY(0);
+  }
+  &__back {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2.5rem;
+    background-color: $mainColor;
+    height: 100%;
+    transform: rotateY(180deg);
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-transform: none;
+  }
+  &__text {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+  &__link {
+    display: inline;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+    &:hover {
+      background: #f0f4f8;
+    }
+  }
+  &__icon {
+    fill: $mainColor;
+    width: 50%;
+    height: 50%;
+  }
+}

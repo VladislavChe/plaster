@@ -24,7 +24,7 @@
     }
   }
   &__top-contacts {
-    background-color: #3a2e33;
+    background-color: #282725;
   }
   &__nav {
     display: flex;
@@ -49,7 +49,8 @@
   &__content {
     display: block;
     padding: 10% 0;
-    background: url(/img/src/index-header-bg.jpg) no-repeat center;
+    background: url(/img/src/index-header-bg2-overlay.jpg) no-repeat center top /
+      cover;
     &.content-fixed {
       margin-top: 80px;
     }
