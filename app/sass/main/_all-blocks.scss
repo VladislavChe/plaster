@@ -468,6 +468,9 @@
         rgba(61, 140, 250, 1) 100%
       );
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a78e4', endColorstr='#3d8cfa', GradientType=1 );
+      @include media(577px) {
+        display: none;
+      }
     }
     &::before {
       top: 0;
@@ -486,10 +489,9 @@
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     flex-direction: column;
     width: 180px;
-    margin-left: 150px;
     &::before,
     &::after {
       position: absolute;
@@ -497,17 +499,27 @@
       width: 320px;
       height: 320px;
       border-radius: 50%;
+      @include media(577px) {
+        width: 230px;
+        height: 230px;
+      }
     }
     &::before {
       top: -35%;
       left: -80%;
       background-color: $mainColor;
+      @include media(577px) {
+        left: -35%;
+      }
     }
     &::after {
       top: -22%;
       left: -40%;
       background-color: #fff;
       box-shadow: 11.35px 22.275px 25.92px 1.08px rgba(14, 62, 129, 0.29);
+      @include media(577px) {
+        left: -15%;
+      }
     }
   }
   &__years-number {
@@ -518,6 +530,9 @@
     color: $mainColor;
     z-index: 1;
     text-align: center;
+    @include media(577px) {
+      font-size: 6.25rem;
+    }
   }
   &__years-text {
     position: relative;
@@ -544,18 +559,41 @@
       left: -80%;
       opacity: 0.15;
     }
+    @include media(577px) {
+      font-size: 1.25rem;
+    }
   }
   &__skills {
     padding-left: 100px;
+    @include media(991px) {
+      padding-left: 0px;
+    }
+  }
+  &__list {
+    @include media(991px) {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 100px;
+    }
+    @include media(577px) {
+      flex-direction: column;
+    }
   }
   &__skills-number {
     font-size: 2.5rem;
     color: $mainColor;
     font-weight: bold;
+    @include media(991px) {
+      display: block;
+      text-align: center;
+    }
   }
   &__skills-text {
     font-size: 1.5rem;
     font-weight: bold;
+    @include media(577px) {
+      text-align: center;
+    }
   }
 }
 
@@ -580,15 +618,14 @@
   &__list-wrapp {
     transition: $time;
     @include media(991px) {
-      position: relative;
-      min-height: 100vh;
-      background: #fff;
       display: block;
       position: absolute;
       top: 15px;
       left: -322px;
       width: 100%;
       max-width: 320px;
+      min-height: 100vh;
+      background: #fff;
       font-size: 16px;
       &--active {
         left: 0;
@@ -805,9 +842,9 @@
       @include media(991px) {
         position: absolute;
         top: -100%;
-        left: -50%;
+        left: -90%;
         display: block;
-        width: 100%;
+        width: 140%;
       }
     }
     &:hover {
@@ -890,8 +927,8 @@
   }
   &__group-menu {
     position: absolute;
-    top: 25px;
-    right: 0;
+    top: 40px;
+    right: 24px;
     padding: 1.5rem;
     background-color: #fff;
     font-size: 1rem;
@@ -1174,6 +1211,7 @@
     color: $mainColor !important;
   }
 }
+
 
 .services-card {
   position: relative;

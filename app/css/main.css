@@ -851,6 +851,9 @@ li {
       background: -webkit-gradient(linear, left top, right top, from(#2a78e4), to(#3d8cfa));
       background: linear-gradient(to right, #2a78e4 0%, #3d8cfa 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a78e4', endColorstr='#3d8cfa', GradientType=1 ); }
+      @media only screen and (max-width: 577px) {
+        .merit__years::before, .merit__years::after {
+          display: none; } }
     .merit__years::before {
       top: 0;
       right: 0;
@@ -869,31 +872,40 @@ li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 180px;
-    margin-left: 150px; }
+    width: 180px; }
     .merit__years-wrapp::before, .merit__years-wrapp::after {
       position: absolute;
       content: '';
       width: 320px;
       height: 320px;
       border-radius: 50%; }
+      @media only screen and (max-width: 577px) {
+        .merit__years-wrapp::before, .merit__years-wrapp::after {
+          width: 230px;
+          height: 230px; } }
     .merit__years-wrapp::before {
       top: -35%;
       left: -80%;
       background-color: #2c7ae7; }
+      @media only screen and (max-width: 577px) {
+        .merit__years-wrapp::before {
+          left: -35%; } }
     .merit__years-wrapp::after {
       top: -22%;
       left: -40%;
       background-color: #fff;
       -webkit-box-shadow: 11.35px 22.275px 25.92px 1.08px rgba(14, 62, 129, 0.29);
               box-shadow: 11.35px 22.275px 25.92px 1.08px rgba(14, 62, 129, 0.29); }
+      @media only screen and (max-width: 577px) {
+        .merit__years-wrapp::after {
+          left: -15%; } }
   .merit__years-number {
     display: block;
     line-height: 1;
@@ -902,6 +914,9 @@ li {
     color: #2c7ae7;
     z-index: 1;
     text-align: center; }
+    @media only screen and (max-width: 577px) {
+      .merit__years-number {
+        font-size: 6.25rem; } }
   .merit__years-text {
     position: relative;
     font-size: 1.5rem;
@@ -923,15 +938,43 @@ li {
       top: -80%;
       left: -80%;
       opacity: 0.15; }
+    @media only screen and (max-width: 577px) {
+      .merit__years-text {
+        font-size: 1.25rem; } }
   .merit__skills {
     padding-left: 100px; }
+    @media only screen and (max-width: 991px) {
+      .merit__skills {
+        padding-left: 0px; } }
+  @media only screen and (max-width: 991px) {
+    .merit__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin-top: 100px; } }
+  @media only screen and (max-width: 577px) {
+    .merit__list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .merit__skills-number {
     font-size: 2.5rem;
     color: #2c7ae7;
     font-weight: bold; }
+    @media only screen and (max-width: 991px) {
+      .merit__skills-number {
+        display: block;
+        text-align: center; } }
   .merit__skills-text {
     font-size: 1.5rem;
     font-weight: bold; }
+    @media only screen and (max-width: 577px) {
+      .merit__skills-text {
+        text-align: center; } }
 
 .nav-menu {
   background-color: #fff; }
@@ -953,15 +996,14 @@ li {
     transition: 0.3s ease-in-out; }
     @media only screen and (max-width: 991px) {
       .nav-menu__list-wrapp {
-        position: relative;
-        min-height: 100vh;
-        background: #fff;
         display: block;
         position: absolute;
         top: 15px;
         left: -322px;
         width: 100%;
         max-width: 320px;
+        min-height: 100vh;
+        background: #fff;
         font-size: 16px; }
         .nav-menu__list-wrapp--active {
           left: 0; } }
@@ -1200,9 +1242,9 @@ li {
       .nav-menu__search-label--active {
         position: absolute;
         top: -100%;
-        left: -50%;
+        left: -90%;
         display: block;
-        width: 100%; } }
+        width: 140%; } }
     .nav-menu__search-label:hover .nav-menu__group-icon--search {
       fill: #2c7ae7; }
     .nav-menu__search-label input {
@@ -1273,8 +1315,8 @@ li {
         display: block; }
   .nav-menu__group-menu {
     position: absolute;
-    top: 25px;
-    right: 0;
+    top: 40px;
+    right: 24px;
     padding: 1.5rem;
     background-color: #fff;
     font-size: 1rem;
