@@ -11,33 +11,38 @@ section.projects
         .projects__filters 
           ul 
             li 
-              button(data-name="ALL")
+              button(class="button" data-filter="all" data-name="ALL")
                 span ALL
             li 
-              button(data-name="MOBILE APPS") 
+              button(class="button" data-filter="projects-card--app" data-name="MOBILE APPS") 
                 span MOBILE APPS
             li 
-              button(data-name="CUSTOM SOFTWARE")
+              button(class="button"
+              data-filter="projects-card--software" data-name="CUSTOM SOFTWARE")
                 span CUSTOM SOFTWARE
             li 
-              button(data-name="QA & TESTING") 
+              button(class="button" 
+              data-filter="projects-card--testing"
+              data-name="QA & TESTING") 
                 span QA & TESTING
             li 
-              button(data-name="UX AND DESIGN") 
-                span UX AND DESIGN
-    .row
-      .col-lg-4
-        +projects-card('img/src/house-1.jpg', 'MPlanner', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
-      .col-lg-4
-        +projects-card('img/src/house-2.jpg', 'WeatherNow', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
-      .col-lg-4
-        +projects-card('img/src/house-3.jpg', 'Langer Messenger', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
-      .col-lg-4
-        +projects-card('img/src/house-4.jpg', 'Mobile Finance', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
-      .col-lg-4
-        +projects-card('img/src/house-5.jpg', 'RaptCash', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
-      .col-lg-4
-        +projects-card('img/src/house-6.jpg', 'Search by photo', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
+              button(class="button" 
+              data-filter="projects-card--design"
+              data-name="UX AND DESIGN") 
+                span 
+    .projects__card-wrapp
+      .cards.projects-card--design
+        +projects-card('img/src/design.jpg', 'MPlanner', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
+      .cards.projects-card--app
+        +projects-card('img/src/mobile-app-1.jpg', 'WeatherNow', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
+      .cards.projects-card--testing
+        +projects-card('img/src/testing-1.jpg', 'Langer Messenger', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
+      .cards.projects-card--software
+        +projects-card('img/src/software.jpg', 'Mobile Finance', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
+      .cards.projects-card--app
+        +projects-card('img/src/mobile-app-2.jpg', 'RaptCash', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
+      .cards.projects-card--testing
+        +projects-card('img/src/testing-2.jpg', 'Search by photo', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
     .projects__btn
       .btn--blue
         +btn('See All Projects')

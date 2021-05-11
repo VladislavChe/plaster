@@ -220,5 +220,57 @@
       }
     }
     /*Merit numbers End*/
+
+    /*Filter Start*/
+    {
+      function app() {
+        // Получаем кнопки и карточки
+        const buttons = document.querySelectorAll('.button');
+        const cards = document.querySelectorAll('.cards');
+
+        // Функция фильтра
+        function filter(category, items) {
+          // перебираем все карточки
+          items.forEach((item) => {
+            // класс как у дата атрибута кнопки
+            const isItemFiltered = !item.classList.contains(category);
+            // класс кнопки 'all'
+            const isShowAll = category.toLowerCase() === 'all';
+            // если класс как у кнопки и не 'all'
+            if (isItemFiltered && !isShowAll) {
+              // добавить класс анимированного скрытия
+              item.classList.add('anime');
+            } else {
+              // иначе убрать класс анимированного скрытия
+              item.classList.remove('anime');
+              item.classList.remove('hides');
+            }
+          });
+        }
+
+        // перебираем все кнопки
+        buttons.forEach((button) => {
+          // ловим клик на конкретной кнопке
+          button.addEventListener('click', () => {
+            // создаем переменную с дата-атрибутом той кнопки на которую кликнули
+            const currentCategory = button.dataset.filter;
+            // передаем переменную и сами карточки в функцию фильтра
+            filter(currentCategory, cards);
+          });
+        });
+
+        cards.forEach((card) => {
+          // Ловим окончание анимации transition
+          card.ontransitionend = function () {
+            if (card.classList.contains('anime')) {
+              card.classList.add('hides');
+            }
+          };
+        });
+      }
+
+      app();
+    }
+    /*Filter End*/
   }
 }

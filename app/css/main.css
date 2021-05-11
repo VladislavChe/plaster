@@ -1731,6 +1731,53 @@ li {
     text-align: center; }
     .projects__btn .btn {
       width: 240px; }
+  .projects__card-wrapp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .projects .cards {
+    width: 33.3333333%;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+
+.anime {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  opacity: 0; }
+
+.hides {
+  -webkit-animation-name: hide;
+          animation-name: hide;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+/*Animations*/
+@-webkit-keyframes hide {
+  0% {
+    visibility: visible;
+    height: 200px; }
+  100% {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    font-size: 0; } }
+@keyframes hide {
+  0% {
+    visibility: visible;
+    height: 200px; }
+  100% {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    font-size: 0; } }
 
 .services-card {
   position: relative;
