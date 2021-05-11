@@ -225,8 +225,8 @@
     {
       function app() {
         // Получаем кнопки и карточки
-        const buttons = document.querySelectorAll('.button');
-        const cards = document.querySelectorAll('.cards');
+        const buttons = document.querySelectorAll('.projects__button');
+        const cards = document.querySelectorAll('.projects__card-item');
 
         // Функция фильтра
         function filter(category, items) {
@@ -239,11 +239,11 @@
             // если класс как у кнопки и не 'all'
             if (isItemFiltered && !isShowAll) {
               // добавить класс анимированного скрытия
-              item.classList.add('anime');
+              item.classList.add('projects__anime');
             } else {
               // иначе убрать класс анимированного скрытия
-              item.classList.remove('anime');
-              item.classList.remove('hides');
+              item.classList.remove('projects__anime');
+              item.classList.remove('projects__hide');
             }
           });
         }
@@ -262,8 +262,8 @@
         cards.forEach((card) => {
           // Ловим окончание анимации transition
           card.ontransitionend = function () {
-            if (card.classList.contains('anime')) {
-              card.classList.add('hides');
+            if (card.classList.contains('projects__anime')) {
+              card.classList.add('projects__hide');
             }
           };
         });

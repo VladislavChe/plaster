@@ -11,37 +11,37 @@ section.projects
         .projects__filters 
           ul 
             li 
-              button(class="button" data-filter="all" data-name="ALL")
+              button(class="projects__button" data-filter="all" data-name="ALL")
                 span ALL
             li 
-              button(class="button" data-filter="projects-card--app" data-name="MOBILE APPS") 
+              button(class="projects__button" data-filter="projects-card--app" data-name="MOBILE APPS") 
                 span MOBILE APPS
             li 
-              button(class="button"
+              button(class="projects__button"
               data-filter="projects-card--software" data-name="CUSTOM SOFTWARE")
                 span CUSTOM SOFTWARE
             li 
-              button(class="button" 
+              button(class="projects__button" 
               data-filter="projects-card--testing"
               data-name="QA & TESTING") 
                 span QA & TESTING
             li 
-              button(class="button" 
+              button(class="projects__button" 
               data-filter="projects-card--design"
               data-name="UX AND DESIGN") 
                 span 
-    .projects__card-wrapp
-      .cards.projects-card--design
+    .projects__cards-list
+      .projects__card-item.projects-card--design
         +projects-card('img/src/design.jpg', 'MPlanner', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
-      .cards.projects-card--app
+      .projects__card-item.projects-card--app
         +projects-card('img/src/mobile-app-1.jpg', 'WeatherNow', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
-      .cards.projects-card--testing
+      .projects__card-item.projects-card--testing
         +projects-card('img/src/testing-1.jpg', 'Langer Messenger', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
-      .cards.projects-card--software
+      .projects__card-item.projects-card--software
         +projects-card('img/src/software.jpg', 'Mobile Finance', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
-      .cards.projects-card--app
+      .projects__card-item.projects-card--app
         +projects-card('img/src/mobile-app-2.jpg', 'RaptCash', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
-      .cards.projects-card--testing
+      .projects__card-item.projects-card--testing
         +projects-card('img/src/testing-2.jpg', 'Search by photo', 'We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.')
     .projects__btn
       .btn--blue

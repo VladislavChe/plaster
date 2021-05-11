@@ -1605,13 +1605,18 @@ li {
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-transition: all 0.6s ease-out;
-    -o-transition: all 0.6s ease-out;
-    transition: all 0.6s ease-out; }
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-radius: 10px; }
   .projects-card__front {
     z-index: 2;
     -webkit-transform: rotateY(0);
-            transform: rotateY(0); }
+            transform: rotateY(0);
+    width: 100%; }
+    .projects-card__front img {
+      width: 100%;
+      height: 400px; }
   .projects-card__back {
     z-index: 1;
     display: -webkit-box;
@@ -1629,7 +1634,7 @@ li {
             align-items: center;
     padding: 2rem 2.5rem;
     background-color: #2c7ae7;
-    height: 100%;
+    height: 400px;
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg); }
   .projects-card__title {
@@ -1688,16 +1693,20 @@ li {
       margin-right: 1.5rem;
       padding: 2px 5px;
       overflow: hidden; }
+      @media only screen and (max-width: 577px) {
+        .projects__filters li {
+          margin-right: 0; } }
       .projects__filters li:last-child {
         margin-right: 0; }
-      .projects__filters li:hover span {
-        -webkit-transform: translateY(100%);
-            -ms-transform: translateY(100%);
-                transform: translateY(100%); }
-      .projects__filters li:hover button::after {
-        -webkit-transform: translateY(0);
-            -ms-transform: translateY(0);
-                transform: translateY(0); }
+      @media only screen and (min-width: 992px) {
+        .projects__filters li:hover span {
+          -webkit-transform: translateY(120%);
+              -ms-transform: translateY(120%);
+                  transform: translateY(120%); }
+        .projects__filters li:hover button::after {
+          -webkit-transform: translateY(0);
+              -ms-transform: translateY(0);
+                  transform: translateY(0); } }
     .projects__filters button {
       position: relative;
       border: none !important;
@@ -1712,6 +1721,12 @@ li {
         -webkit-transition: all 0.4s;
         -o-transition: all 0.4s;
         transition: all 0.4s; }
+        @media only screen and (max-width: 767px) {
+          .projects__filters button span {
+            font-size: 14px; } }
+        @media only screen and (max-width: 577px) {
+          .projects__filters button span {
+            font-size: 9px; } }
       .projects__filters button::after {
         content: attr(data-name);
         position: absolute;
@@ -1726,36 +1741,52 @@ li {
         transition: all 0.4s;
         font-size: 16px;
         color: #2c7ae7; }
+        @media only screen and (max-width: 767px) {
+          .projects__filters button::after {
+            font-size: 14px; } }
+        @media only screen and (max-width: 577px) {
+          .projects__filters button::after {
+            font-size: 9px; } }
   .projects__btn {
     margin-top: 50px;
     text-align: center; }
     .projects__btn .btn {
       width: 240px; }
-  .projects__card-wrapp {
+  .projects__cards-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-  .projects .cards {
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .projects__card-item {
     width: 33.3333333%;
+    max-width: 350px;
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
-    transition: all 0.5s ease; }
-
-.anime {
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-  opacity: 0; }
-
-.hides {
-  -webkit-animation-name: hide;
-          animation-name: hide;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
+    transition: all 0.5s ease;
+    padding: 0 15px; }
+    @media only screen and (max-width: 991px) {
+      .projects__card-item {
+        width: 50%; } }
+    @media only screen and (max-width: 577px) {
+      .projects__card-item {
+        width: 1000%; } }
+  .projects__anime {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    padding: 0; }
+  .projects__hide {
+    -webkit-animation-name: hide;
+            animation-name: hide;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
 
 /*Animations*/
 @-webkit-keyframes hide {
