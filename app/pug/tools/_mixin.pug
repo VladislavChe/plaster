@@ -24,6 +24,7 @@ mixin icon(iconName, className, modific)
 
 //-END svg sprite
 
+//- Buttons
 mixin btn(text)
   a.btn
     span
@@ -31,6 +32,7 @@ mixin btn(text)
     p 
       +icon('right-arrow', 'btn__icon')
 
+//- Services-card
 mixin services-card(icon, h4, text)
   a(href="#" class="services-card")
     .services-card__icon-wrapp
@@ -38,6 +40,7 @@ mixin services-card(icon, h4, text)
     h4.services-card__title=h4
     p.services-card__text=text
 
+//- Choose-card
 mixin choose-card(numb, title, text)
   .choose-card 
     .choose-card__number
@@ -46,6 +49,7 @@ mixin choose-card(numb, title, text)
       h4=title
       p=text
 
+//- Projects-card
 mixin projects-card(img, title, text)
   .projects-card
     .projects-card__front
@@ -56,4 +60,16 @@ mixin projects-card(img, title, text)
       .projects-card__icon-wrapp
         a(href="#" class="projects-card__link") 
           +icon('right-arrow', 'projects-card__icon')
-          
+
+//- Our-team-card
+mixin our-team-card
+  .our-team-card
+    .our-team-card__top
+      img(src="img/src/team-1.jpg", alt="people")
+    .our-team-card__bottom 
+      h5 Mary Lee
+      p Software Developer 
+      ul 
+        li 
+          a(href="#") 
+

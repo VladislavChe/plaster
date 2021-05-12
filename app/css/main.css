@@ -1388,6 +1388,38 @@ li {
     .our-services__btn .btn {
       width: 240px; }
 
+.our-team-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden; }
+  .our-team-card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid #d4d4e1;
+    overflow: hidden;
+    pointer-events: none;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s; }
+  .our-team-card__top img {
+    width: 100%; }
+  .our-team-card__bottom {
+    text-align: center;
+    padding: 1.5rem 1rem 1rem; }
+
+.our-team {
+  padding: 80px 0; }
+  .our-team__title {
+    text-align: center;
+    margin-bottom: 65px; }
+    .our-team__title p {
+      color: #2c7ae7; }
+
 .popup {
   display: none; }
   .popup__form-wrapp {

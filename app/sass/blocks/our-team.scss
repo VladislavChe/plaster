@@ -1,0 +1,10 @@
+.our-team {
+  padding: 80px 0;
+  &__title {
+    text-align: center;
+    margin-bottom: 65px;
+    p {
+      color: $mainColor;
+    }
+  }
+}
