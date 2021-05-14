@@ -83,3 +83,23 @@ mixin our-team-card(img, name, position)
           a(href="#") 
             +icon('twitter', 'our-team-card__icon')
 
+//- People-say-card
+mixin people-say-card(img, name, position, text)
+  .people-say-card
+    .people-say-card__top
+      img(src=img, alt="people")
+      .people-say-card__top-info 
+        h5=name
+        p=position
+    .people-say-card__bottom 
+      p=text
+
+//- Latest-news-card
+mixin latest-news-card(img, title, text, date)
+  a(href="#" class="latest-news-card")
+    .latest-news-card__top
+      img(src=img, alt="picture")
+    .latest-news-card__bottom 
+      h5=title
+      p=text
+      p.latest-news-card__date=date

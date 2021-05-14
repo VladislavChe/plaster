@@ -1,0 +1,51 @@
+.people-say-card {
+  position: relative;
+  height: 100%;
+  padding: 2rem 1.25rem;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: $time;
+  @include media(767px) {
+    max-width: 510px;
+    margin: 0 auto;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid #d4d4e1;
+    overflow: hidden;
+    pointer-events: none;
+    transition: $time;
+  }
+  &:hover {
+    &::after {
+      border-color: transparent;
+      transition: $time;
+    }
+    box-shadow: 2px 4px 20px 1px rgba(45, 45, 45, 0.13);
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    img {
+      margin-right: 1.25rem;
+    }
+  }
+  &__top-info {
+    h5 {
+      font-size: 1.125rem;
+      text-transform: none;
+    }
+  }
+  &__bottom {
+    p {
+      text-align: left;
+    }
+  }
+}

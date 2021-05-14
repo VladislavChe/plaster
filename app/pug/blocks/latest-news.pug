@@ -1,0 +1,19 @@
+// Latest News
+section.latest-news
+  .container
+    .row 
+      .col-12
+        .latest-news__title
+          p MORE INFO ABOUT
+          h2 Latest News
+    .row
+      .col-12.col-md-6.col-lg-4.latest-news__item 
+        +latest-news-card('img/src/news-1.jpg', 'Benefits Of Async/Await', 'Asynchronous functions are a good and bad thing in JavaScript.', '07/01/2021')
+      .col-12.col-md-6.col-lg-4.latest-news__item
+       +latest-news-card('img/src/news-2.jpg', 'Key Considerations Of IPaaS', 'Digital transformation requires cloud appropriate adoption.', '05/01/2021')
+      .col-12.col-md-6.col-lg-4
+        +latest-news-card('img/src/news-3.jpg', 'Hibernate Query Language', 'In this tutorial, we will discuss the Hibernate Query Language.', '01/01/2021')
+    .projects__btn
+      .btn--blue
+        +btn('See All News')
+// /Latest News

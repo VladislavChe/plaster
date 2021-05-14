@@ -1,0 +1,59 @@
+.latest-news-card {
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: $time;
+  @include media(767px) {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid #d4d4e1;
+    overflow: hidden;
+    pointer-events: none;
+    transition: $time;
+  }
+  &:hover {
+    color: #303036;
+    box-shadow: 2px 4px 20px 1px rgba(45, 45, 45, 0.13);
+    &::after {
+      border-color: transparent;
+      transition: $time;
+    }
+  }
+  &__top {
+    img {
+      height: 320px;
+    }
+  }
+  &__bottom {
+    position: relative;
+    padding: 2.1875rem 1.25rem 1.25rem;
+    h5 {
+      font-size: 1.125rem;
+      text-transform: none;
+      margin-bottom: 0.625rem;
+    }
+  }
+  &__date {
+    position: absolute;
+    top: -1.125rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2.25rem;
+    line-height: 2.25rem;
+    padding: 0 0.625rem;
+    background-color: $mainColor;
+    font-size: 0.8125rem;
+    border-radius: 6px;
+    color: #fff;
+  }
+}

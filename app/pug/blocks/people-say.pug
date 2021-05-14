@@ -1,0 +1,19 @@
+// People Say
+section.people-say
+  .container
+    .row 
+      .col-12
+        .people-say__title
+          p REVIEWS FROM OUR CLIENTS
+          h2 What People Say
+    .row
+      .col-12.col-md-6.col-lg-4.people-say__item 
+        +people-say-card('img/src/people-1.jpg', 'Catherine Williams', 'Regular client', 'PathSoft offers a high caliber of resources skilled in Microsoft Azure.NET, mobile and Quality Assurance. They became our true business partners over the past three years.')
+      .col-12.col-md-6.col-lg-4.people-say__item
+        +people-say-card('img/src/people-2.jpg', 'Rupert Wood', 'Regular client', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit consequuntur sequi eos beatae deleniti culpa cupiditate rerum. Similique, blanditiis rem perspiciatis fugiat voluptatem quas officiis ducimus reprehenderit.')
+      .col-12.col-md-12.col-lg-4
+        +people-say-card('img/src/people-3.jpg', 'Samantha Brown', 'Regular client', 'We sincerely hope that each and every user entering our website will find exactly. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.')
+    .projects__btn
+      .btn--blue
+        +btn('See All Reviews')
+// /People Say
