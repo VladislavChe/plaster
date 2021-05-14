@@ -1481,6 +1481,8 @@ li {
     margin-bottom: 65px; }
     .our-team__title p {
       color: #2c7ae7; }
+  .our-team__item {
+    margin-bottom: 45px; }
 
 .popup {
   display: none; }
