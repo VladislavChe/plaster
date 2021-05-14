@@ -62,14 +62,24 @@ mixin projects-card(img, title, text)
           +icon('right-arrow', 'projects-card__icon')
 
 //- Our-team-card
-mixin our-team-card
+mixin our-team-card(img, name, position)
   .our-team-card
     .our-team-card__top
-      img(src="img/src/team-1.jpg", alt="people")
+      img(src=img, alt="people")
     .our-team-card__bottom 
-      h5 Mary Lee
-      p Software Developer 
-      ul 
+      h5=name
+      p=position 
+      ul.our-team-card__social-list
         li 
           a(href="#") 
+            +icon('facebook-f', 'our-team-card__icon')
+        li 
+          a(href="#") 
+            +icon('instagram', 'our-team-card__icon')
+        li 
+          a(href="#") 
+            +icon('linkedin', 'our-team-card__icon')
+        li 
+          a(href="#") 
+            +icon('twitter', 'our-team-card__icon')
 
