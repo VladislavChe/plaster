@@ -677,6 +677,207 @@ li {
     -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out; }
 
+.footer {
+  padding: 70px 0;
+  background-color: #282725; }
+  .footer__logo {
+    display: block;
+    margin-bottom: 1.25rem;
+    max-width: 100%; }
+    @media only screen and (max-width: 991px) {
+      .footer__logo {
+        margin-right: -95px; } }
+    .footer__logo img {
+      width: 50px;
+      height: 50px;
+      display: inline-block; }
+    .footer__logo span {
+      margin-left: 10px;
+      font-size: 19px;
+      color: #fff;
+      font-weight: bold; }
+  .footer__text {
+    color: #fff;
+    opacity: 0.8;
+    margin-bottom: 50px; }
+  .footer__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 120px; }
+    .footer__social li {
+      margin-right: 10px;
+      border: 1px solid #fff;
+      border-radius: 6px;
+      -webkit-transition: 0.3s ease-in-out;
+      -o-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out; }
+      .footer__social li:hover {
+        background-color: #fff; }
+        .footer__social li:hover .footer__icon {
+          fill: #303036; }
+    .footer__social a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      margin-right: 10px; }
+      .footer__social a:last-child {
+        margin-right: 0; }
+      .footer__social a svg {
+        opacity: 0.8;
+        width: 20px;
+        height: 20px;
+        -webkit-transition: 0.3s ease-in-out;
+        -o-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out; }
+        .footer__social a svg:hover {
+          opacity: 1;
+          -webkit-transition: 0.3s ease-in-out;
+          -o-transition: 0.3s ease-in-out;
+          transition: 0.3s ease-in-out; }
+      .footer__social a path {
+        fill: white; }
+  .footer__icon {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
+  .footer__title {
+    color: #fff;
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+    opacity: 0.9;
+    font-weight: bold; }
+  .footer__item {
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 1rem; }
+    .footer__item:last-child {
+      margin-bottom: 0; }
+    .footer__item:hover .footer__link span {
+      -webkit-transform: translateY(100%);
+          -ms-transform: translateY(100%);
+              transform: translateY(100%); }
+    .footer__item:hover .footer__link::after {
+      -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+              transform: translateY(0); }
+  .footer__link {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #303036;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden; }
+    .footer__link span {
+      color: #fff;
+      opacity: 0.8;
+      -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+    .footer__link::after {
+      content: attr(data-title);
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-transform: translateY(-100%);
+          -ms-transform: translateY(-100%);
+              transform: translateY(-100%);
+      width: 100%;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+      color: #2c7ae7; }
+  .footer__contact-list {
+    color: #fff;
+    opacity: 0.8; }
+    .footer__contact-list li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 1rem; }
+      .footer__contact-list li a:hover {
+        color: #fff;
+        text-decoration: underline; }
+  .footer__icon_contacts {
+    margin-right: 7px; }
+  .footer__contact-list-link {
+    margin-right: 5px; }
+  .footer__form-wrapp {
+    margin-top: 2rem; }
+  .footer__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media only screen and (max-width: 577px) {
+      .footer__form {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+    .footer__form input {
+      margin-right: 1rem;
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      padding: 10px 0 10px 10px;
+      border-radius: 6px;
+      cursor: text;
+      color: #fff; }
+      .footer__form input:focus {
+        border-color: #045ed4; }
+      @media only screen and (max-width: 577px) {
+        .footer__form input {
+          width: 100%;
+          margin-bottom: 1rem; } }
+    .footer__form button {
+      border-radius: 6px;
+      border: none;
+      padding: 10px 20px;
+      background-color: #2c7ae7;
+      color: #fff; }
+      .footer__form button:hover {
+        background-color: #045ed4;
+        -webkit-transform: translateY(1px);
+            -ms-transform: translateY(1px);
+                transform: translateY(1px); }
+      @media only screen and (max-width: 577px) {
+        .footer__form button {
+          width: 100%; } }
+  @media only screen and (max-width: 767px) {
+    .footer__col-2 {
+      margin-top: 45px; } }
+  @media only screen and (max-width: 767px) {
+    .footer__col-3 {
+      margin-top: 45px; } }
+  @media only screen and (max-width: 991px) {
+    .footer__col-4 {
+      margin-top: 45px; } }
+
 /*Button Toggle Sidebar-Start*/
 .hamburger {
   display: -webkit-box;

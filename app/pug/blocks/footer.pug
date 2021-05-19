@@ -1,18 +1,78 @@
-footer.footer 
-  .row 
-    .col-lg-3 
-      .footer__logo
-      .footer__text 
-      .footer__socisal 
-    .col-lg-3 
-      .footer__menu 
-    .col-lg-3 
-      .footer__offer 
-    .col-lg-3 
-      .footer__contacts 
-  .row 
-    .col-lg-6
-      .footer__private-policy 
-    .col-lg-6
-      .footer__rights
-
+// Footer
+footer.footer
+  .container
+    .row 
+      .col-sm-12.col-md-5.col-lg-3 
+        a(class= "footer__logo" href="#")
+          img(src="img/src/gem.png", alt="logo")
+          span MasterSoft
+        p.footer__text Our company has been developing high-quality and reliable software for corporate needs since 2008. We are renowned professionals of software development. 
+        ul.footer__social
+          li
+            a(href="http://", target="_blank", title="facebook") 
+              +icon('facebook-f', 'footer__icon')
+          li
+            a(href="http://", target="_blank", title="instagram")
+              +icon('instagram', 'footer__icon')
+          li
+            a(href="http://", target="_blank", title="linkedin")
+              +icon('linkedin', 'footer__icon')
+          li
+            a(href="http://", target="_blank", title="twitter")
+              +icon('twitter', 'footer__icon')
+      .col-xl-1.d-none.d-xl-block
+      .col-6.col-sm-6.col-md-3.col-lg-2.footer__col-2 
+        h4.footer__title Menu
+        ul.footer__list 
+          li.footer__item
+            a(class="footer__link" href="#" data-title="About Us") 
+              span About Us
+          li.footer__item
+            a(class="footer__link" href="#" data-title="Services") 
+              span Services
+          li.footer__item
+            a(class="footer__link" href="#" data-title="Pricing") 
+              span Pricing
+          li.footer__item
+            a(class="footer__link" href="#" data-title="News") 
+              span News
+          li.footer__item
+            a(class="footer__link" href="#" data-title="Contact Us") 
+              span Contact Us
+      .col-6.col-sm-6.col-md-4.col-lg-2.footer__col-3 
+        h4.footer__title What We Offer 
+        ul.footer__list 
+          li.footer__item
+            a(class="footer__link" href="#" data-title="DB Management") 
+              span DB Management
+          li.footer__item
+            a(class="footer__link" href="#" data-title="IOS/MacOS") 
+              span IOS/MacOS
+          li.footer__item
+            a(class="footer__link" href="#" data-title="Android Apps") 
+              span Android Apps
+          li.footer__item
+            a(class="footer__link" href="#" data-title="Windows Apps") 
+              span Windows Apps
+          li.footer__item
+            a(class="footer__link" href="#" data-title="UX & UI") 
+              span UX & UI
+      .col-md-12.col-lg-4.footer__col-4 
+        h4.footer__title Our contacts 
+        ul.footer__contact-list
+          li
+            +icon('geo', 'footer__icon footer__icon_contacts')
+            p 12 rue Eugеne Hеnaff Wilmington, DE 19805
+          li
+            +icon('smartphone', 'footer__icon footer__icon_contacts')
+            a(href="tel:+11234567789" class="footer__contact-list-link") +1 123-456-7789
+            a(href="tel:+19876543211") +1 987-654-3211
+          li
+            +icon('mail', 'footer__icon footer__icon_contacts')
+            a(href="mailto:mail@example.com") mail@example.com
+        .footer__form-wrapp
+          h4.footer__title Subscribe
+          form.footer__form
+            input(type="email" placeholder="Your email" required)
+            button Subscribe
+// /Footer
