@@ -2,6 +2,7 @@
 footer.footer
   .container
     .row 
+      // Footer-about
       .col-sm-12.col-md-5.col-lg-3 
         a(class= "footer__logo" href="#")
           img(src="img/src/gem.png", alt="logo")
@@ -20,7 +21,9 @@ footer.footer
           li
             a(href="http://", target="_blank", title="twitter")
               +icon('twitter', 'footer__icon')
+      // /Footer-about
       .col-xl-1.d-none.d-xl-block
+      // Footer-menu
       .col-6.col-sm-6.col-md-3.col-lg-2.footer__col-2 
         h4.footer__title Menu
         ul.footer__list 
@@ -39,6 +42,8 @@ footer.footer
           li.footer__item
             a(class="footer__link" href="#" data-title="Contact Us") 
               span Contact Us
+      // /Footer-menu
+      // Footer-offer
       .col-6.col-sm-6.col-md-4.col-lg-2.footer__col-3 
         h4.footer__title What We Offer 
         ul.footer__list 
@@ -57,6 +62,8 @@ footer.footer
           li.footer__item
             a(class="footer__link" href="#" data-title="UX & UI") 
               span UX & UI
+      // /Footer-offer
+      // Footer-contacts
       .col-md-12.col-lg-4.footer__col-4 
         h4.footer__title Our contacts 
         ul.footer__contact-list
@@ -68,11 +75,12 @@ footer.footer
             a(href="tel:+11234567789" class="footer__contact-list-link") +1 123-456-7789
             a(href="tel:+19876543211") +1 987-654-3211
           li
-            +icon('mail', 'footer__icon footer__icon_contacts')
+            +icon('mail2', 'footer__icon footer__icon_contacts')
             a(href="mailto:mail@example.com") mail@example.com
         .footer__form-wrapp
           h4.footer__title Subscribe
           form.footer__form
             input(type="email" placeholder="Your email" required)
             button Subscribe
+      // /Footer-contacts
 // /Footer

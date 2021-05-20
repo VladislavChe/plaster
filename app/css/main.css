@@ -2193,10 +2193,7 @@ li {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+        flex-wrap: wrap; }
   .projects__card-item {
     width: 33.3333333%;
     max-width: 350px;
