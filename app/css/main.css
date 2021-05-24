@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -561,6 +562,61 @@ li {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg); } }
 
+.wrapp-btn2 {
+  position: relative; }
+
+.btn {
+  --width: 100%;
+  --time: 0.7s;
+  position: relative;
+  display: inline-block;
+  height: 1em;
+  padding: 1em;
+  color: white;
+  background: #222;
+  overflow: hidden; }
+
+.btn text {
+  position: relative;
+  z-index: 5;
+  -webkit-transition: color var(--time);
+  -o-transition: color var(--time);
+  transition: color var(--time); }
+
+.btn:hover text {
+  color: #222; }
+
+.btn span {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  background: #fff;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: width var(--time), padding-top var(--time);
+  -o-transition: width var(--time), padding-top var(--time);
+  transition: width var(--time), padding-top var(--time); }
+
+.btn:hover span {
+  width: calc(var(--width) * 2.25);
+  padding-top: calc(var(--width) * 2.25); }
+
+.btn.FLASH:hover text {
+  color: white; }
+
+.btn.FLASH span {
+  background: #ff3b3b; }
+
+.animated {
+  --angle: 5deg;
+  -webkit-animation: shake 0.3s;
+          animation: shake 0.3s; }
+
 .choose-card {
   position: relative;
   display: -webkit-box;
@@ -1002,10 +1058,51 @@ li {
 
 .index-header__content {
   display: block;
-  padding: 10% 0;
-  background: url(/img/src/index-header-bg2-overlay.jpg) no-repeat center top/cover; }
+  background: rgba(238, 120, 120, 0.61); }
   .index-header__content.content-fixed {
     margin-top: 80px; }
+
+.index-header__content-inner {
+  height: 640px;
+  /*Стили для слайдера БАЗОВЫЕ*/
+  /* Слайдер */
+  /* Слайдер запущен */
+  /* Слайдер с точками */
+  /* Ограничивающая оболочка */
+  /* Лента слайдов */
+  /* Слайд */
+  /* Слайд активный (показывается) */
+  /* Слайд основной */
+  /* Слайд по центру */
+  /* Клонированный слайд */
+  /* Стрелка */
+  /* Стрелка влево */
+  /* Стрелка вправо */
+  /* Стрелка не активная */
+  /* Точки (булиты) */
+  /* Активная точка */
+  /* Элемент точки */ }
+  .index-header__content-inner .slick-slider {
+    height: 100%; }
+  .index-header__content-inner .slick-list {
+    height: 100%;
+    overflow: hidden; }
+  .index-header__content-inner .slick-track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%; }
+  .index-header__content-inner .slider__item {
+    height: 100%; }
+  .index-header__content-inner .slider__slide1 {
+    height: 100%;
+    background: url(../img/src/slide-1.jpg) center/cover; }
+  .index-header__content-inner .slider__slide2 {
+    height: 100%;
+    background: url(../img/src/slide-2.jpg) center/cover; }
+  .index-header__content-inner .slider__slide3 {
+    height: 100%;
+    background: url(../img/src/slide-3.jpg) center/cover; }
 
 .index-header__offer {
   text-align: center; }

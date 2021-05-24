@@ -174,6 +174,55 @@
     }
     /*Ripple hover btn End*/
 
+    /* MY BTN */
+    {
+      const ANIMATEDCLASSNAME = 'animated';
+      const ELEMENTS = document.querySelectorAll('.btn');
+      const ELEMENTS_SPAN = [];
+
+      ELEMENTS.forEach((element, index) => {
+        // add The span element for this element.
+        ELEMENTS_SPAN[index] = element.querySelector('span');
+
+        let addAnimation = false;
+
+        // Elements that contain the "FLASH" class, add a listener to remove
+        // animation-class when the animation ends
+        if (element.classList.contains('FLASH')) {
+          element.addEventListener('animationend', () => {
+            element.classList.remove(ANIMATEDCLASSNAME);
+          });
+
+          addAnimation = true;
+        }
+
+        const getPosition = (el) => ({
+          x: el.getBoundingClientRect().left,
+          y: el.getBoundingClientRect().top,
+        });
+
+        const changeSpanPosition = (e) => {
+          ELEMENTS_SPAN[index].style.left =
+            e.pageX - getPosition(element).x + 'px';
+          ELEMENTS_SPAN[index].style.top =
+            e.pageY - getPosition(element).y + 'px';
+        };
+
+        element.addEventListener('mouseover', (e) => {
+          changeSpanPosition(e);
+
+          // Add an animation-class to animate via CSS.
+          if (addAnimation) {
+            element.classList.add(ANIMATEDCLASSNAME);
+          }
+        });
+
+        element.addEventListener('mouseout', (e) => {
+          changeSpanPosition(e);
+        });
+      });
+    }
+
     /*Merit numbers Start*/
     {
       // Время в милисекундах
@@ -272,5 +321,22 @@
       app();
     }
     /*Filter End*/
+
+    /*Slider Start*/
+    {
+      /* Включение главной функции jQuery */
+      $(document).ready(function () {
+        /* Инициализация gallery-slider-1 в html */
+        $('.slider').slick({
+          dots: true,
+          arrows: false,
+          infinite: true,
+          speed: 500,
+          fade: false,
+          cssEase: 'linear',
+        });
+      });
+    }
+    /*Slider End*/
   }
 }
