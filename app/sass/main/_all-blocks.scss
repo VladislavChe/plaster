@@ -104,12 +104,12 @@
     display: inline-block;
     margin-left: 20px;
     .btn {
-      border: 1px solid #fff;
+      border: 1px solid $textcolor;
       p {
-        color: #fff;
+        color: $textcolor;
       }
       .btn__icon {
-        fill: #fff;
+        fill: $textcolor;
       }
       &:hover {
         p {
@@ -143,69 +143,6 @@
   100% {
     transform: rotate(0deg);
   }
-}
-
-.wrapp-btn2 {
-  position: relative;
-}
-
-.btn {
-  --width: 100%;
-  --time: 0.7s;
-
-  position: relative;
-  display: inline-block;
-  height: 1em;
-  padding: 1em;
-
-  color: white;
-  background: #222;
-  overflow: hidden;
-}
-
-.btn text {
-  position: relative;
-  z-index: 5;
-
-  transition: color var(--time);
-}
-
-.btn:hover text {
-  color: #222;
-}
-
-.btn span {
-  content: '';
-  position: absolute;
-  z-index: 0;
-
-  display: block;
-  width: 0;
-  height: 0;
-
-  border-radius: 100%;
-  background: #fff;
-
-  transform: translate(-50%, -50%);
-  transition: width var(--time), padding-top var(--time);
-}
-
-.btn:hover span {
-  width: calc(var(--width) * 2.25);
-  padding-top: calc(var(--width) * 2.25);
-}
-
-.btn.FLASH:hover text {
-  color: white;
-}
-
-.btn.FLASH span {
-  background: #ff3b3b;
-}
-
-.animated {
-  --angle: 5deg;
-  animation: shake 0.3s;
 }
 
 .choose-card {
@@ -670,6 +607,7 @@
     /*Стили для слайдера БАЗОВЫЕ*/
     /* Слайдер */
     .slick-slider {
+      position: relative;
       height: 100%;
     } /* Слайдер запущен */
     .slick-slider.slick-initialized {
@@ -692,6 +630,8 @@
     .slider__slide1 {
       height: 100%;
       background: url(../img/src/slide-1.jpg) center / cover;
+      display: flex;
+      align-items: center;
     }
     .slider__slide2 {
       height: 100%;
@@ -722,16 +662,48 @@
     }
     /* Точки (булиты) */
     .slick-dots {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
     .slick-dots li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      margin: 0 1.125rem 1.875rem 0;
+      list-style: none;
     } /* Активная точка */
-    .slick-dots li.slick-active {
+    .slick-dots li.slick-active button {
+      background: $mainColor;
+      width: 100%;
+      height: 100%;
     } /* Элемент точки */
     .slick-dots li button {
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      background: #303036;
+      border-radius: 50%;
+      border: none;
     }
   }
   &__offer {
-    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    padding-left: 121px;
+    margin-top: -120px;
+    h1 {
+      text-transform: none;
+    }
+    p {
+      margin: 40px 0;
+    }
   }
   &__title {
     color: #fff;
@@ -1320,6 +1292,7 @@
     height: 18px;
     cursor: pointer;
     transition: $time;
+    fill: $textcolor;
     &:hover {
       fill: $mainColor;
     }

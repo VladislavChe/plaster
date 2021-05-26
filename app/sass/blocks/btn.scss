@@ -104,12 +104,12 @@
     display: inline-block;
     margin-left: 20px;
     .btn {
-      border: 1px solid #fff;
+      border: 1px solid $textcolor;
       p {
-        color: #fff;
+        color: $textcolor;
       }
       .btn__icon {
-        fill: #fff;
+        fill: $textcolor;
       }
       &:hover {
         p {
