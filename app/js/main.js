@@ -136,7 +136,7 @@
   if (!index) {
     // console.log('da');
   } else {
-    /* MY BTN */
+    /*BTN Start*/
     {
       const ANIMATEDCLASSNAME = 'animated';
       const ELEMENTS = document.querySelectorAll('.btn');
@@ -165,9 +165,9 @@
 
         const changeSpanPosition = (e) => {
           ELEMENTS_SPAN[index].style.left =
-            e.pageX - getPosition(element).x + 'px';
+            e.clientX - getPosition(element).x + 'px';
           ELEMENTS_SPAN[index].style.top =
-            e.pageY - getPosition(element).y + 'px';
+            e.clientY - getPosition(element).y + 'px';
         };
 
         element.addEventListener('mouseover', (e) => {
@@ -184,6 +184,7 @@
         });
       });
     }
+    /*BTN End*/
 
     /*Merit numbers Start*/
     {
@@ -294,7 +295,7 @@
           arrows: false,
           infinite: true,
           speed: 500,
-          fade: false,
+          fade: true,
           cssEase: 'linear',
         });
       });

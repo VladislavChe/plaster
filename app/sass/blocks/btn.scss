@@ -15,6 +15,7 @@
     color: $textcolor;
     z-index: 5;
     transition: color var(--time);
+    font-size: 0.875rem;
   }
   span {
     border-radius: 100%;
@@ -102,7 +103,7 @@
   }
   &--black {
     display: inline-block;
-    margin-left: 20px;
+
     .btn {
       border: 1px solid $textcolor;
       p {
