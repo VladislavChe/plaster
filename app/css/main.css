@@ -990,7 +990,7 @@ li {
   position: relative;
   top: 0;
   height: 80px;
-  z-index: 9999;
+  z-index: 999;
   background: #fff;
   -webkit-box-shadow: 0px 0px 14px 0px rgba(77, 82, 94, 0.15);
           box-shadow: 0px 0px 14px 0px rgba(77, 82, 94, 0.15); }
@@ -1003,8 +1003,7 @@ li {
       margin-top: 80px; }
 
 .index-header__content {
-  display: block;
-  background: rgba(238, 120, 120, 0.61); }
+  display: block; }
   .index-header__content.content-fixed {
     margin-top: 80px; }
 
@@ -1049,12 +1048,27 @@ li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .index-header__content-inner .slider__slides::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      opacity: 0.7;
+      z-index: -1; }
+      @media only screen and (max-width: 1199px) {
+        .index-header__content-inner .slider__slides::after {
+          z-index: 999; } }
     .index-header__content-inner .slider__slides--1 {
       background: url(../img/src/slide-1.jpg) center/cover; }
     .index-header__content-inner .slider__slides--2 {
       background: url(../img/src/slide-2.jpg) center/cover; }
     .index-header__content-inner .slider__slides--3 {
       background: url(../img/src/slide-3.jpg) center/cover; }
+  .index-header__content-inner .slick-slide {
+    z-index: 998 !important; }
   .index-header__content-inner .slick-dots {
     position: absolute;
     display: -webkit-box;
@@ -1071,7 +1085,7 @@ li {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
-    z-index: 9999; }
+    z-index: 998; }
   .index-header__content-inner .slick-dots li {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1100,13 +1114,20 @@ li {
 
 .index-header__offer {
   width: 100%;
-  max-width: 500px;
-  padding-left: 121px;
-  margin-top: -120px; }
+  max-width: 450px;
+  position: absolute;
+  left: 17%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 9999; }
   .index-header__offer h1 {
-    text-transform: none; }
+    text-transform: none;
+    max-width: 400px; }
   .index-header__offer p {
-    margin: 40px 0; }
+    margin: 40px 0;
+    max-width: 450px; }
 
 .index-header__buttons .btn--black {
   margin-left: 20px; }
