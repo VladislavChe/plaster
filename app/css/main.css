@@ -960,7 +960,7 @@ li {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: 2;
   -webkit-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
@@ -990,7 +990,7 @@ li {
   position: relative;
   top: 0;
   height: 80px;
-  z-index: 999;
+  z-index: 3;
   background: #fff;
   -webkit-box-shadow: 0px 0px 14px 0px rgba(77, 82, 94, 0.15);
           box-shadow: 0px 0px 14px 0px rgba(77, 82, 94, 0.15); }
@@ -1049,6 +1049,7 @@ li {
         -ms-flex-align: center;
             align-items: center; }
     .index-header__content-inner .slider__slides::after {
+      display: none;
       content: '';
       position: absolute;
       top: 0;
@@ -1057,10 +1058,11 @@ li {
       height: 100%;
       background: #fff;
       opacity: 0.7;
-      z-index: -1; }
+      z-index: 0; }
       @media only screen and (max-width: 1199px) {
         .index-header__content-inner .slider__slides::after {
-          z-index: 999; } }
+          display: block;
+          z-index: 0; } }
     .index-header__content-inner .slider__slides--1 {
       background: url(../img/src/slide-1.jpg) center/cover; }
     .index-header__content-inner .slider__slides--2 {
@@ -1068,7 +1070,9 @@ li {
     .index-header__content-inner .slider__slides--3 {
       background: url(../img/src/slide-3.jpg) center/cover; }
   .index-header__content-inner .slick-slide {
-    z-index: 998 !important; }
+    z-index: 0 !important; }
+  .index-header__content-inner .slick-slide.slick-active {
+    z-index: 1 !important; }
   .index-header__content-inner .slick-dots {
     position: absolute;
     display: -webkit-box;
@@ -1085,7 +1089,7 @@ li {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
-    z-index: 998; }
+    z-index: 1; }
   .index-header__content-inner .slick-dots li {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1111,6 +1115,8 @@ li {
     background: #303036;
     border-radius: 50%;
     border: none; }
+    .index-header__content-inner .slick-dots li button:hover {
+      background: #2c7ae7; }
 
 .index-header__offer {
   width: 100%;
@@ -1121,7 +1127,7 @@ li {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  z-index: 9999; }
+  z-index: 1; }
   .index-header__offer h1 {
     text-transform: none;
     max-width: 400px; }

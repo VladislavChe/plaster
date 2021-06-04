@@ -9,6 +9,7 @@
     content = document.querySelector('.index-header__content');
   // создаем переменную с расстоянием над меню
   const navOffset = nav.offsetTop;
+
   // ловим событие скролла
   function checkMarginToTop() {
     if (window.pageYOffset > navOffset) {
