@@ -453,20 +453,20 @@
         margin-bottom: 1rem;
       }
     }
-    button {
-      border-radius: 6px;
-      border: none;
-      padding: 10px 20px;
-      background-color: $mainColor;
-      color: #fff;
-      &:hover {
-        background-color: #045ed4;
-        transform: translateY(1px);
-      }
-      @include media(577px) {
-        width: 100%;
-      }
-    }
+    // button {
+    //   border-radius: 6px;
+    //   border: none;
+    //   padding: 10px 20px;
+    //   background-color: $mainColor;
+    //   color: #fff;
+    //   &:hover {
+    //     background-color: #045ed4;
+    //     transform: translateY(1px);
+    //   }
+    //   @include media(577px) {
+    //     width: 100%;
+    //   }
+    // }
   }
   // Form End
   &__col-2 {
@@ -588,26 +588,42 @@
     z-index: 3;
     background: #fff;
     box-shadow: 0px 0px 14px 0px rgba(77, 82, 94, 0.15);
-    &.nav-fixed {
+    @include minmedia(991px) {
+      &.nav-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        .index-header__content {
+          margin-top: 80px;
+        }
+      }
+    }
+    @include media(991px) {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      .index-header__content {
-        margin-top: 80px;
-      }
+      // .index-header__content {
+      //   margin-top: 80px;
+      // }
     }
   }
   // Content
   &__content {
     display: block;
-
     &.content-fixed {
+      margin-top: 80px;
+    }
+    @include media(991px) {
       margin-top: 80px;
     }
   }
   &__content-inner {
     height: 640px;
+    @include media(991px) {
+      max-height: 550px;
+    }
     /*Стили для слайдера БАЗОВЫЕ*/
     /* Слайдер */
     .slick-slider {
@@ -630,6 +646,9 @@
     /* Слайд */
     .slider__item {
       height: 100%;
+      .container {
+        position: relative;
+      }
     }
     .slider__slides {
       height: 100%;
@@ -723,10 +742,16 @@
     width: 100%;
     max-width: 450px;
     position: absolute;
-    left: 17%;
+    left: 13%;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
+    @include media(991px) {
+      left: 5%;
+    }
+    @include media(576px) {
+      width: 90%;
+    }
     h1 {
       text-transform: none;
       max-width: 400px;
@@ -740,7 +765,7 @@
     .btn--black {
       margin-left: 20px;
     }
-    @include media(577px) {
+    @include media(576px) {
       .btn--black {
         display: block;
         margin-left: 0;

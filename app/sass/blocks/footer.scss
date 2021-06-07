@@ -174,20 +174,20 @@
         margin-bottom: 1rem;
       }
     }
-    button {
-      border-radius: 6px;
-      border: none;
-      padding: 10px 20px;
-      background-color: $mainColor;
-      color: #fff;
-      &:hover {
-        background-color: #045ed4;
-        transform: translateY(1px);
-      }
-      @include media(577px) {
-        width: 100%;
-      }
-    }
+    // button {
+    //   border-radius: 6px;
+    //   border: none;
+    //   padding: 10px 20px;
+    //   background-color: $mainColor;
+    //   color: #fff;
+    //   &:hover {
+    //     background-color: #045ed4;
+    //     transform: translateY(1px);
+    //   }
+    //   @include media(577px) {
+    //     width: 100%;
+    //   }
+    // }
   }
   // Form End
   &__col-2 {

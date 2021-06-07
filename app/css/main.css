@@ -856,20 +856,6 @@ li {
         .footer__form input {
           width: 100%;
           margin-bottom: 1rem; } }
-    .footer__form button {
-      border-radius: 6px;
-      border: none;
-      padding: 10px 20px;
-      background-color: #2c7ae7;
-      color: #fff; }
-      .footer__form button:hover {
-        background-color: #045ed4;
-        -webkit-transform: translateY(1px);
-            -ms-transform: translateY(1px);
-                transform: translateY(1px); }
-      @media only screen and (max-width: 577px) {
-        .footer__form button {
-          width: 100%; } }
   @media only screen and (max-width: 767px) {
     .footer__col-2 {
       margin-top: 45px; } }
@@ -994,18 +980,28 @@ li {
   background: #fff;
   -webkit-box-shadow: 0px 0px 14px 0px rgba(77, 82, 94, 0.15);
           box-shadow: 0px 0px 14px 0px rgba(77, 82, 94, 0.15); }
-  .index-header__nav.nav-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0; }
-    .index-header__nav.nav-fixed .index-header__content {
-      margin-top: 80px; }
+  @media only screen and (min-width: 991px) {
+    .index-header__nav.nav-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0; }
+      .index-header__nav.nav-fixed .index-header__content {
+        margin-top: 80px; } }
+  @media only screen and (max-width: 991px) {
+    .index-header__nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0; } }
 
 .index-header__content {
   display: block; }
   .index-header__content.content-fixed {
     margin-top: 80px; }
+  @media only screen and (max-width: 991px) {
+    .index-header__content {
+      margin-top: 80px; } }
 
 .index-header__content-inner {
   height: 640px;
@@ -1027,6 +1023,9 @@ li {
   /* Точки (булиты) */
   /* Активная точка */
   /* Элемент точки */ }
+  @media only screen and (max-width: 991px) {
+    .index-header__content-inner {
+      max-height: 550px; } }
   .index-header__content-inner .slick-slider {
     position: relative;
     height: 100%; }
@@ -1040,6 +1039,8 @@ li {
     height: 100%; }
   .index-header__content-inner .slider__item {
     height: 100%; }
+    .index-header__content-inner .slider__item .container {
+      position: relative; }
   .index-header__content-inner .slider__slides {
     height: 100%;
     display: -webkit-box;
@@ -1122,12 +1123,18 @@ li {
   width: 100%;
   max-width: 450px;
   position: absolute;
-  left: 17%;
+  left: 13%;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 1; }
+  @media only screen and (max-width: 991px) {
+    .index-header__offer {
+      left: 5%; } }
+  @media only screen and (max-width: 576px) {
+    .index-header__offer {
+      width: 90%; } }
   .index-header__offer h1 {
     text-transform: none;
     max-width: 400px; }
@@ -1138,7 +1145,7 @@ li {
 .index-header__buttons .btn--black {
   margin-left: 20px; }
 
-@media only screen and (max-width: 577px) {
+@media only screen and (max-width: 576px) {
   .index-header__buttons .btn--black {
     display: block;
     margin-left: 0;
