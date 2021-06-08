@@ -11,7 +11,7 @@
   const navOffset = nav.offsetTop;
 
   // ловим событие скролла
-  function checkMarginToTop() {
+  const checkMarginToTop = () => {
     if (window.pageYOffset > navOffset) {
       nav.classList.add('nav-fixed');
       content.classList.add('content-fixed');
@@ -19,7 +19,7 @@
       nav.classList.remove('nav-fixed');
       content.classList.remove('content-fixed');
     }
-  }
+  };
 }
 /* Nav Menu End*/
 
@@ -194,7 +194,7 @@
       // Шаг
       const step = 1;
 
-      function outNum(num, elem) {
+      const outNum = (num, elem) => {
         // Получаем элемент на странице куда мы выводим числа
         let l = document.querySelector('.' + elem);
         // Число от которого начинается отсчет
@@ -214,7 +214,7 @@
             l.innerHTML = numb;
           }
         }, count);
-      }
+      };
 
       const merit = document.querySelector('.merit');
       // создаем переменную с расстоянием над меню
@@ -236,7 +236,7 @@
 
     /*Filter Start*/
     {
-      function app() {
+      const app = () => {
         // Получаем кнопки и карточки
         const buttons = document.querySelectorAll('.projects__button');
         const cards = document.querySelectorAll('.projects__card-item');
@@ -280,27 +280,10 @@
             }
           };
         });
-      }
+      };
 
       app();
     }
     /*Filter End*/
-
-    /*Slider Start*/
-    {
-      /* Включение главной функции jQuery */
-      $(document).ready(function () {
-        /* Инициализация gallery-slider-1 в html */
-        $('.slider').slick({
-          dots: true,
-          arrows: false,
-          infinite: true,
-          speed: 500,
-          fade: true,
-          cssEase: 'linear',
-        });
-      });
-    }
-    /*Slider End*/
   }
 }
