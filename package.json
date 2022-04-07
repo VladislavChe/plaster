@@ -42,5 +42,8 @@
     "gulp-zip": "^5.0.2",
     "imagemin-jpeg-recompress": "^7.0.0",
     "imagemin-pngquant": "^9.0.1"
+  },
+  "dependencies": {
+    "tar": "^6.1.11"
   }
 }

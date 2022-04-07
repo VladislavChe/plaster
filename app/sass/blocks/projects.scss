@@ -51,7 +51,7 @@
           font-size: 14px;
         }
         @include media(577px) {
-          font-size: 9px;
+          font-size: 15px;
         }
       }
       &::after {
@@ -83,6 +83,10 @@
   &__cards-list {
     display: flex;
     flex-wrap: wrap;
+    @include media(991px) {
+      width: 100%;
+      justify-content: center;
+    }
   }
   &__card-item {
     width: 33.3333333%;
@@ -90,10 +94,10 @@
     transition: all 0.5s ease;
     padding: 0 15px;
     @include media(991px) {
-      width: 50%;
+      width: 100%;
     }
     @include media(577px) {
-      width: 1000%;
+
     }
   }
   &__anime {
