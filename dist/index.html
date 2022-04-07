@@ -1,118 +1,351 @@
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title-->
   <title>Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Portfolio frontend developer">
-  <meta name="keywords" content="portfolio, frontend, developer, web, web-developer, верстка, создание сайта, разработчик сайтов.">
-  <!-- Favicon--><link rel="icon" href="img/src/favicon.ico" type="image/x-icon">
+  <!-- /Title-->
+  <!-- Favicon--><link rel="icon" href="img/src/gem.ico" type="image/x-icon">
+  <!-- /Favicon-->
   <!-- OG Tags-->
-  <meta property="og:title" content="Portfolio frontend developer">
-  <meta property="og:description" content="portfolio, frontend, developer, web, web-developer, верстка, создание сайта, разработчик сайтов.">
+  <meta name="description" content="MasterSoft">
+  <meta name="keywords" content="IT Solution for Your Business">
+  <meta property="og:title" content="MasterSoft">
+  <meta property="og:description" content="IT Solution for Your Business">
   <meta property="og:type" content="article">
   <meta property="og:image" content="#">
-  <meta property="og:site_name" content="Portfolio frontend developer">
-  <!-- adaptability-->
+  <meta property="og:site_name" content="MasterSoft">
+  <!-- /OG Tags-->
+  <!-- Adaptability-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- /Adaptability-->
+  <!-- Font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&amp;display=swap" rel="stylesheet">
+  <!-- /Font-->
   <!-- CSS styles-->
   <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/main.css">
+  <!-- /CSS styles-->
 </head>
 <body>
+  <!-- Popup-->
+  <div class="popup">
+    <div class="popup__form-wrapp" id="form-wrapp">
+      <h4 class="popup__title">We will call you</h4>
+      <form class="popup__form" action="#" method="post">
+        <div class="popup__wrapp-input">
+          <input class="popup__input" name="name" type="text" placeholder="Your name" required>
+        </div>
+        <div class="popup__wrapp-input">
+          <input class="popup__input" name="phone" type="tel" data-action="phone" placeholder="Your phone" required>
+        </div>
+        <label class="popup__checkbox" for="popup__checkbox"> 
+          <input class="popup__checkbox-input" id="popup__checkbox" type="checkbox" required><span class="popup__real-checkbox"></span>
+          <p class="popup__checkbox-text">I agree to the transfer of personal data in accordance with the  <a href="#">Privacy Policy</a></p>
+        </label>
+        <div class="btn--blue">
+          <button class="btn" type="submit"><span></span>
+            <p>Waiting for a Сall</p>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- /Popup-->
+  <!-- Header-->
   <header class="index-header">
+    <div class="index-header__overlay"></div>
     <div class="index-header__top-contacts">
       <div class="container">
-        <div class="contacts-line">
+        <!-- Top contacts-->
+        <div class="contacts-line d-none d-lg-block">
           <div class="row"> 
-            <div class="col-4"> 
-              <div class="contacts-line__mail contacts-line__contacts"><a href="mailto:mail@example.com"><?xml version="1.0" encoding="utf-8"?>
-<svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg><span>mail@example.com</span></a></div>
-              <div class="contacts-line__tel contacts-line__contacts"><a href="tel:+78003001020">
-                   <?xml version="1.0" encoding="utf-8"?>
-<svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1600 1240q0 27-10 70.5t-21 68.5q-21 50-122 106-94 51-186 51-27 0-53-3.5t-57.5-12.5-47-14.5-55.5-20.5-49-18q-98-35-175-83-127-79-264-216t-216-264q-48-77-83-175-3-9-18-49t-20.5-55.5-14.5-47-12.5-57.5-3.5-53q0-92 51-186 56-101 106-122 25-11 68.5-21t70.5-10q14 0 21 3 18 6 53 76 11 19 30 54t35 63.5 31 53.5q3 4 17.5 25t21.5 35.5 7 28.5q0 20-28.5 50t-62 55-62 53-28.5 46q0 9 5 22.5t8.5 20.5 14 24 11.5 19q76 137 174 235t235 174q2 1 19 11.5t24 14 20.5 8.5 22.5 5q18 0 46-28.5t53-62 55-62 50-28.5q14 0 28.5 7t35.5 21.5 25 17.5q25 15 53.5 31t63.5 35 54 30q70 35 76 53 3 7 3 21z"/></svg><span>8 800 312 11 51</span></a></div>
+            <div class="col-lg-6"> 
+              <div class="contacts-line__mail contacts-line__contacts"><a href="mailto:mail@example.com">
+                  <svg class="svg-icon contacts-line__icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#mail"></use>
+                  </svg><span>mail@example.com</span></a></div>
+              <div class="contacts-line__tel contacts-line__contacts"><a href="tel:+78003001020"> 
+                  <svg class="svg-icon contacts-line__icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#phone"></use>
+                  </svg><span>8 800 312 11 51</span></a></div>
             </div>
-            <div class="col-8">
-              <div class="contacts-line__social"><a href="http://" target="_blank" title="facebook">
-                   <?xml version="1.0" encoding="utf-8"?>
-<svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/></svg></a><a href="http://" target="_blank" title="instagram"><?xml version="1.0" encoding="utf-8"?>
-<svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1152 896q0-106-75-181t-181-75-181 75-75 181 75 181 181 75 181-75 75-181zm138 0q0 164-115 279t-279 115-279-115-115-279 115-279 279-115 279 115 115 279zm108-410q0 38-27 65t-65 27-65-27-27-65 27-65 65-27 65 27 27 65zm-502-220q-7 0-76.5-.5t-105.5 0-96.5 3-103 10-71.5 18.5q-50 20-88 58t-58 88q-11 29-18.5 71.5t-10 103-3 96.5 0 105.5.5 76.5-.5 76.5 0 105.5 3 96.5 10 103 18.5 71.5q20 50 58 88t88 58q29 11 71.5 18.5t103 10 96.5 3 105.5 0 76.5-.5 76.5.5 105.5 0 96.5-3 103-10 71.5-18.5q50-20 88-58t58-88q11-29 18.5-71.5t10-103 3-96.5 0-105.5-.5-76.5.5-76.5 0-105.5-3-96.5-10-103-18.5-71.5q-20-50-58-88t-88-58q-29-11-71.5-18.5t-103-10-96.5-3-105.5 0-76.5.5zm768 630q0 229-5 317-10 208-124 322t-322 124q-88 5-317 5t-317-5q-208-10-322-124t-124-322q-5-88-5-317t5-317q10-208 124-322t322-124q88-5 317-5t317 5q208 10 322 124t124 322q5 88 5 317z"/></svg></a><a href="http://" target="_blank" title="linkedin"><?xml version="1.0" encoding="utf-8"?>
-<svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/></svg></a><a href="http://" target="_blank" title="twitter"><?xml version="1.0" encoding="utf-8"?>
-<svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg></a></div>
+            <div class="col-lg-6 d-flex">
+              <ul class="contacts-line__social">
+                <li><a href="http://" target="_blank" title="facebook"> 
+                    <svg class="svg-icon contacts-line__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#facebook-f"></use>
+                    </svg></a></li>
+                <li><a href="http://" target="_blank" title="instagram">
+                    <svg class="svg-icon contacts-line__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#instagram"></use>
+                    </svg></a></li>
+                <li><a href="http://" target="_blank" title="linkedin">
+                    <svg class="svg-icon contacts-line__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#linkedin"></use>
+                    </svg></a></li>
+                <li><a href="http://" target="_blank" title="twitter">
+                    <svg class="svg-icon contacts-line__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#twitter"></use>
+                    </svg></a></li>
+              </ul><a class="contacts-line__callback" href="#form-wrapp">
+                <svg class="svg-icon contacts-line__icon">
+                  <use xlink:href="img/svg/symbol/sprite.svg#call-back"></use>
+                </svg><span>Callback</span></a>
             </div>
           </div>
         </div>
+        <!-- /Top contacts-->
       </div>
     </div>
     <div class="index-header__nav">
       <div class="container"> 
+        <!-- Nav-menu-->
         <div class="nav-menu">
           <div class="row align-items-center">
-            <div class="col-3"> <a class="nav-menu__logo" href="#"><img src="img/src/logo.png" alt="logo"><span>Plastermsk</span></a></div>
-            <div class="col-6"> 
-              <ul class="nav-menu__list"> 
-                <li class="nav-menu__item"><a class="nav-menu__link" href="#" data-title="Главная"> <span>Главная</span></a></li>
-                <li class="nav-menu__item"><a class="nav-menu__link" href="#" data-title="Услуги"> <span>Услуги </span><img src="img/src/up.svg" alt="arrow"></a>
-                  <ul class="nav-menu__sub-list"> 
-                    <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Гипсовая штукатурка стен"> <span>Гипсовая штукатурка стен</span></a></li>
-                    <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Цементная штукатурка стен"> <span>Цементная штукатурка стен</span></a></li>
-                    <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Стяжка пола"> <span>Стяжка пола</span></a></li>
-                    <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Шпаклевка"> <span>Шпаклевка</span></a></li>
-                  </ul>
-                </li>
-                <li class="nav-menu__item"><a class="nav-menu__link" href="#" data-title="Выполненные работы"> <span>Выполненные работы</span></a></li>
-                <li class="nav-menu__item"><a class="nav-menu__link" href="#" data-title="Контакты"> <span>Контакты</span></a></li>
-              </ul>
+            <div class="col-6 nav-menu__order1 col-lg-3 d-flex justify-content-between align-items-center">
+              <!-- Hamburger-->
+              <div class="hamburger d-lg-none">
+                <button class="hamburger__wrapper">
+                  <div class="hamburger__menu"></div>
+                </button>
+              </div>
+              <!-- /Hamburger-->
+              <!-- Logo--><a class="nav-menu__logo" href="#"><img src="img/src//gem.png" alt="logo"><span>MasterSoft</span></a>
+              <!-- /Logo-->
             </div>
-            <div class="col-3"> 
+            <div class="col-12 nav-menu__order3 col-lg-6"> 
+              <!-- Menu-->
+              <div class="nav-menu__list-wrapp">
+                <ul class="nav-menu__list"> 
+                  <li class="nav-menu__item">
+                    <div class="nav-menu__link-wrapp"><a class="nav-menu__link" href="#" data-title="Home"> <span>Home</span><img src="img/src/up.svg" alt="arrow"></a>
+                      <div class="nav-menu__wrapp-img">
+                        <svg class="svg-icon nav-menu__icon">
+                          <use xlink:href="img/svg/symbol/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <ul class="nav-menu__sub-list"> 
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Home 1"> <span>Home 1</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Home 2"> <span>Home 2</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Home 3"> <span>Home 3</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Home 4"> <span>Home 4</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Home 5"><span>Home 5</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Home 6"><span>Home 6</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Home 7"><span>Home 7</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Home 8"><span>Home 8</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Home 9"><span>Home 9</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-menu__item">
+                    <div class="nav-menu__link-wrapp"><a class="nav-menu__link" href="#" data-title="Services"> <span>Services</span><img src="img/src/up.svg" alt="arrow"></a>
+                      <div class="nav-menu__wrapp-img">
+                        <svg class="svg-icon nav-menu__icon">
+                          <use xlink:href="img/svg/symbol/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <ul class="nav-menu__sub-list"> 
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Services 1"> <span>Services 1</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Services 2"> <span>Services 2</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Services 3"> <span>Services 3</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Services 4"> <span>Services 4</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-menu__item">
+                    <div class="nav-menu__link-wrapp"><a class="nav-menu__link" href="#" data-title="Gallery"> <span>Gallery</span><img src="img/src/up.svg" alt="arrow"></a>
+                      <div class="nav-menu__wrapp-img">
+                        <svg class="svg-icon nav-menu__icon">
+                          <use xlink:href="img/svg/symbol/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <ul class="nav-menu__sub-list"> 
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Gallery 1"> <span>Gallery 1</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Gallery 2"> <span>Gallery 2</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Gallery 3"> <span>Gallery 3</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Gallery 4"> <span>Gallery 4</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-menu__item">
+                    <div class="nav-menu__link-wrapp"><a class="nav-menu__link" href="contacts.html" data-title="Contacts"> <span>Contacts</span><img src="img/src/up.svg" alt="arrow"></a>
+                      <div class="nav-menu__wrapp-img">
+                        <svg class="svg-icon nav-menu__icon">
+                          <use xlink:href="img/svg/symbol/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <ul class="nav-menu__sub-list"> 
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Contacts 1"> <span>Contacts 1</span></a></li>
+                      <li class="nav-menu__sub-item"><a class="nav-menu__sub-link" href="#" data-name="Contacts 2"> <span>Contacts 2</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!-- /Menu  -->
+            </div>
+            <div class="col-6 nav-menu__order2 col-lg-3">
+              <!-- Search bar -->
               <label class="nav-menu__search-label" for="search-bar">
-                <input type="text"><span class="nav-menu__search-icon"><?xml version="1.0" encoding="utf-8"?>
-<svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg></span>
+                <input type="text"><span class="nav-menu__search-icon">
+                  <svg class="svg-icon nav-menu__group-icon nav-menu__group-icon--input-search">
+                    <use xlink:href="img/svg/symbol/sprite.svg#search"></use>
+                  </svg></span>
               </label>
+              <!-- /Search bar-->
+              <!-- Group-->
+              <div class="nav-menu__group d-lg-none">
+                <svg class="svg-icon nav-menu__group-icon nav-menu__group-icon--search">
+                  <use xlink:href="img/svg/symbol/sprite.svg#search"></use>
+                </svg>
+                <svg class="svg-icon nav-menu__group-icon nav-menu__group-icon--cancel">
+                  <use xlink:href="img/svg/symbol/sprite.svg#cancel"></use>
+                </svg>
+                <svg class="svg-icon nav-menu__group-icon nav-menu__group-icon--dots">
+                  <use xlink:href="img/svg/symbol/sprite.svg#dots-vertical"></use>
+                </svg>
+                <ul class="nav-menu__group-menu">
+                  <li class="nav-menu__group-menu-item"><a class="nav-menu__group-menu-link" href="mailto:mail@example.com">
+                      <svg class="svg-icon nav-menu__group-menu-icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#mail"></use>
+                      </svg><span>mail@example.com </span></a></li>
+                  <li class="nav-menu__group-menu-item"><a class="nav-menu__group-menu-link" href="tel:+78003001020"> 
+                      <svg class="svg-icon nav-menu__group-menu-icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#phone"></use>
+                      </svg><span>8 800 312 11 51 </span></a></li>
+                  <li class="nav-menu__group-menu-item"><a class="nav-menu__group-menu-link" href="#"> 
+                      <svg class="svg-icon nav-menu__group-menu-icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#call-back"></use>
+                      </svg><span>Callback</span></a></li>
+                  <li class="nav-menu__group-menu-item">
+                    <ul class="nav-menu__group-sub-menu">
+                      <li class="nav-menu__group-sub-menu-item"> <a class="nav-menu__group-sub-menu-link" href="http://" target="_blank" title="facebook"> 
+                          <svg class="svg-icon nav-menu__group-menu-icon">
+                            <use xlink:href="img/svg/symbol/sprite.svg#facebook-f"></use>
+                          </svg></a></li>
+                      <li class="nav-menu__group-sub-menu"> <a class="nav-menu__group-sub-menu-link" href="http://" target="_blank" title="instagram"> 
+                          <svg class="svg-icon nav-menu__group-menu-icon">
+                            <use xlink:href="img/svg/symbol/sprite.svg#instagram"></use>
+                          </svg></a></li>
+                      <li class="nav-menu__group-sub-menu"> <a class="nav-menu__group-sub-menu-link" href="http://" target="_blank" title="linkedin"> 
+                          <svg class="svg-icon nav-menu__group-menu-icon">
+                            <use xlink:href="img/svg/symbol/sprite.svg#linkedin"></use>
+                          </svg></a></li>
+                      <li class="nav-menu__group-sub-menu"> <a class="nav-menu__group-sub-menu-link" href="http://" target="_blank" title="twitter"> 
+                          <svg class="svg-icon nav-menu__group-menu-icon nav-menu__group-menu-icon--twitter">
+                            <use xlink:href="img/svg/symbol/sprite.svg#twitter"></use>
+                          </svg></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!-- /Group-->
+            </div>
+          </div>
+        </div>
+        <!-- /Nav-menu-->
+      </div>
+    </div>
+    <!-- Offer-->
+    <div class="index-header__content">
+      <div class="index-header__content-inner">
+        <div class="slider">
+          <div class="slider__item">
+            <div class="slider__slides slider__slides--1">
+              <div class="container">
+                <div class="index-header__offer">
+                  <h1>IT Solution for Your Business</h1>
+                  <p>The template you will be able to create a site for your business. The template has many different blocks from which you can create your own unique site.</p>
+                  <div class="index-header__buttons">
+                    <div class="btn--blue"><a class="btn"><span></span>
+                        <p>UI elements</p>
+                        <p> 
+                          <svg class="svg-icon btn__icon">
+                            <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                          </svg>
+                        </p></a>
+                    </div>
+                    <div class="btn--black"> <a class="btn"><span></span>
+                        <p>Get in Touch</p>
+                        <p> 
+                          <svg class="svg-icon btn__icon">
+                            <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                          </svg>
+                        </p></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__slides slider__slides--2">
+              <div class="container">
+                <div class="index-header__offer">
+                  <h1>IT Solution for Your Business</h1>
+                  <p>Since our establishment, we have been delivering high-quality and sustainable software solutions for corporate business purposes.</p>
+                  <div class="index-header__buttons">
+                    <div class="btn--blue"><a class="btn"><span></span>
+                        <p>UI elements</p>
+                        <p> 
+                          <svg class="svg-icon btn__icon">
+                            <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                          </svg>
+                        </p></a>
+                    </div>
+                    <div class="btn--black"> <a class="btn"><span></span>
+                        <p>Get in Touch</p>
+                        <p> 
+                          <svg class="svg-icon btn__icon">
+                            <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                          </svg>
+                        </p></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__slides slider__slides--3">
+              <div class="container">
+                <div class="index-header__offer">
+                  <h1>IT Solution for Your Business</h1>
+                  <p>The template you will be able to create a site for your business. The template has many different blocks from which you can create your own unique site.</p>
+                  <div class="index-header__buttons">
+                    <div class="btn--blue"><a class="btn"><span></span>
+                        <p>UI elements</p>
+                        <p> 
+                          <svg class="svg-icon btn__icon">
+                            <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                          </svg>
+                        </p></a>
+                    </div>
+                    <div class="btn--black"><a class="btn"><span></span>
+                        <p>Get in Touch</p>
+                        <p> 
+                          <svg class="svg-icon btn__icon">
+                            <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                          </svg>
+                        </p></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="index-header__overlay">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="index-header__offer">
-              <h1 class="index-header__title">
-                 Механизированная штукатурка <span> стен потолков и откосов</span><br>в Москве и МО</h1>
-              <p class="index-header__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo ad, exercitationem laudantium doloremque dolorum commodi ut fugiat eius ex odio maxime deleniti nostrum, hic facere accusantium et dolor error minima.</p>
-              <div class="index-header__buttons"><a class="index-header__btn index-header__btn--blue" href="#">UI elements
-                  <svg id="Capa_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                    <g>
-                      <g>
-                        <path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068      c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557      l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104      c0.006-0.006,0.011-0.013,0.018-0.019C513.968,262.339,513.943,249.635,506.134,241.843z"></path>
-                      </g>
-                    </g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                  </svg></a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- /Offer-->
   </header>
-  <div class="our-services">
+  <!-- /Header     
+  -->
+  <!-- Services-->
+  <section class="our-services">
     <div class="container">
       <div class="row"> 
         <div class="col-12">
@@ -123,65 +356,634 @@
         </div>
       </div>
       <div class="row"> 
-        <div class="col-4 our-services__item"><a class="services-card" href="#">
+        <div class="col-md-6 col-lg-4 our-services__item"><a class="services-card" href="#">
             <div class="services-card__icon-wrapp">
               <svg class="svg-icon services-card__icon">
                 <use xlink:href="img/svg/symbol/sprite.svg#settings"></use>
               </svg>
             </div>
-            <h4 class="services-card__title">Solution</h4>
+            <h4 class="services-card__title">Corporate Solution</h4>
             <p class="services-card__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots	in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p></a>
         </div>
-        <div class="col-4 our-services__item"><a class="services-card" href="#">
+        <div class="col-md-6 col-lg-4 our-services__item"><a class="services-card" href="#">
             <div class="services-card__icon-wrapp">
               <svg class="svg-icon services-card__icon">
                 <use xlink:href="img/svg/symbol/sprite.svg#phone-call"></use>
               </svg>
             </div>
-            <h4 class="services-card__title">Solution</h4>
+            <h4 class="services-card__title">Call Center Solutions</h4>
             <p class="services-card__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots	in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p></a>
         </div>
-        <div class="col-4 our-services__item"><a class="services-card" href="#">
+        <div class="col-md-6 col-lg-4 our-services__item"><a class="services-card" href="#">
             <div class="services-card__icon-wrapp">
               <svg class="svg-icon services-card__icon">
                 <use xlink:href="img/svg/symbol/sprite.svg#success"></use>
               </svg>
             </div>
-            <h4 class="services-card__title">Solution</h4>
+            <h4 class="services-card__title">Cloud Development</h4>
             <p class="services-card__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots	in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p></a>
         </div>
-      </div>
-      <div class="row"> 
-        <div class="col-4"><a class="services-card" href="#">
+        <div class="col-md-6 col-lg-4 our-services__item"><a class="services-card" href="#">
             <div class="services-card__icon-wrapp">
               <svg class="svg-icon services-card__icon">
                 <use xlink:href="img/svg/symbol/sprite.svg#laptop"></use>
               </svg>
             </div>
-            <h4 class="services-card__title">Solution</h4>
+            <h4 class="services-card__title">IOS/MacOS Apps</h4>
             <p class="services-card__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots	in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p></a>
         </div>
-        <div class="col-4"><a class="services-card" href="#">
+        <div class="col-md-6 col-lg-4 our-services__item"><a class="services-card" href="#">
             <div class="services-card__icon-wrapp">
               <svg class="svg-icon services-card__icon">
                 <use xlink:href="img/svg/symbol/sprite.svg#mobile-phone"></use>
               </svg>
             </div>
-            <h4 class="services-card__title">Solution</h4>
+            <h4 class="services-card__title">Android Applications</h4>
             <p class="services-card__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots	in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p></a>
         </div>
-        <div class="col-4"><a class="services-card" href="#">
+        <div class="col-md-6 col-lg-4 our-services__item"><a class="services-card" href="#">
             <div class="services-card__icon-wrapp">
               <svg class="svg-icon services-card__icon">
                 <use xlink:href="img/svg/symbol/sprite.svg#monitor"></use>
               </svg>
             </div>
-            <h4 class="services-card__title">Solution</h4>
+            <h4 class="services-card__title">UX And Design</h4>
             <p class="services-card__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots	in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p></a>
         </div>
       </div>
+      <div class="our-services__btn">
+        <div class="btn--blue"><a class="btn"><span></span>
+            <p>See All Services</p>
+            <p> 
+              <svg class="svg-icon btn__icon">
+                <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+              </svg>
+            </p></a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+  <!-- /Services       -->
+  <!-- Choose-->
+  <section class="choose"> 
+    <div class="container">
+      <div class="row"> 
+        <div class="col-12">
+          <div class="choose__title">
+            <p>SOME REASONS</p>
+            <h2>Why Choose Us</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row"> 
+        <div class="col-md-6 col-lg-4 choose__item">
+          <div class="choose-card"> 
+            <div class="choose-card__number"><span>01</span></div>
+            <div class="choose-card__inner">
+              <h4>High Quality Hardware</h4>
+              <p>We use top-notch hardware to develop the most efficient apps for our customers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 choose__item">
+          <div class="choose-card"> 
+            <div class="choose-card__number"><span>02</span></div>
+            <div class="choose-card__inner">
+              <h4>Dedicated 24/7 Support</h4>
+              <p>You can rely on our 24/7 tech support that will gladly solve any app issue you may have.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 choose__item">
+          <div class="choose-card"> 
+            <div class="choose-card__number"><span>03</span></div>
+            <div class="choose-card__inner">
+              <h4>30-Day Money-back Guarantee</h4>
+              <p>If you are not satisfied with our apps, we will return your money in the first 30 days.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 choose__item">
+          <div class="choose-card"> 
+            <div class="choose-card__number"><span>04</span></div>
+            <div class="choose-card__inner">
+              <h4>Agile and Fast Working Style</h4>
+              <p>This type of approach to our work helps our specialists to quickly develop better apps.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 choose__item">
+          <div class="choose-card"> 
+            <div class="choose-card__number"><span>05</span></div>
+            <div class="choose-card__inner">
+              <h4>Some Applications are Free</h4>
+              <p>We also develop free apps that can be downloaded online without any payments.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="choose-card"> 
+            <div class="choose-card__number"><span>06</span></div>
+            <div class="choose-card__inner">
+              <h4>High Level of Usability</h4>
+              <p>All our products have high usability allowing users to easily operate the apps.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Choose-->
+  <!-- Merit-->
+  <section class="merit merit__not-animate"> 
+    <div class="container">
+      <div class="row"> 
+        <div class="col-lg-7 col-12">
+          <div class="merit__years">
+            <div class="merit__years-wrapp"><span class="merit__years-number">10</span>
+              <p class="merit__years-text">Years <br>Of Experience</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-12">
+          <div class="merit__skills"> 
+            <ul class="merit__list">
+              <li><span class="merit__skills-number">2K</span>
+                <p class="merit__skills-text">Аpps Developed</p>
+              </li>
+              <li><span class="merit__skills-number merit__skills-consultans">40</span>
+                <p class="merit__skills-text">Consultans</p>
+              </li>
+              <li><span class="merit__skills-number merit__skills-employers">160</span>
+                <p class="merit__skills-text">Employers</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Latest projects-->
+  <section class="projects"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="projects__title">
+            <p>OUR WORKS</p>
+            <h2>Latest Projects</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12"> 
+          <div class="projects__filters"> 
+            <ul> 
+              <li> 
+                <button class="projects__button" data-filter="all" data-name="ALL"><span>ALL</span></button>
+              </li>
+              <li> 
+                <button class="projects__button" data-filter="projects-card--app" data-name="MOBILE APPS"> <span>MOBILE APPS</span></button>
+              </li>
+              <li> 
+                <button class="projects__button" data-filter="projects-card--software" data-name="CUSTOM SOFTWARE"><span>CUSTOM SOFTWARE</span></button>
+              </li>
+              <li> 
+                <button class="projects__button" data-filter="projects-card--testing" data-name="QA &amp; TESTING"> <span>QA & TESTING</span></button>
+              </li>
+              <li> 
+                <button class="projects__button" data-filter="projects-card--design" data-name="UX AND DESIGN"> <span> </span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="projects__cards-list">
+        <div class="projects__card-item projects-card--design">
+          <div class="projects-card">
+            <div class="projects-card__front"><img src="img/src/design.jpg" alt="project"/></div>
+            <div class="projects-card__back">
+              <h5 class="projects-card__title">MPlanner</h5>
+              <p class="projects-card__text">We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.</p>
+              <div class="projects-card__icon-wrapp"><a class="projects-card__link" href="#"> 
+                  <svg class="svg-icon projects-card__icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="projects__card-item projects-card--app">
+          <div class="projects-card">
+            <div class="projects-card__front"><img src="img/src/mobile-app-1.jpg" alt="project"/></div>
+            <div class="projects-card__back">
+              <h5 class="projects-card__title">WeatherNow</h5>
+              <p class="projects-card__text">We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.</p>
+              <div class="projects-card__icon-wrapp"><a class="projects-card__link" href="#"> 
+                  <svg class="svg-icon projects-card__icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="projects__card-item projects-card--testing">
+          <div class="projects-card">
+            <div class="projects-card__front"><img src="img/src/testing-1.jpg" alt="project"/></div>
+            <div class="projects-card__back">
+              <h5 class="projects-card__title">Langer Messenger</h5>
+              <p class="projects-card__text">We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.</p>
+              <div class="projects-card__icon-wrapp"><a class="projects-card__link" href="#"> 
+                  <svg class="svg-icon projects-card__icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="projects__card-item projects-card--software">
+          <div class="projects-card">
+            <div class="projects-card__front"><img src="img/src/software.jpg" alt="project"/></div>
+            <div class="projects-card__back">
+              <h5 class="projects-card__title">Mobile Finance</h5>
+              <p class="projects-card__text">We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.</p>
+              <div class="projects-card__icon-wrapp"><a class="projects-card__link" href="#"> 
+                  <svg class="svg-icon projects-card__icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="projects__card-item projects-card--app">
+          <div class="projects-card">
+            <div class="projects-card__front"><img src="img/src/mobile-app-3.png" alt="project"/></div>
+            <div class="projects-card__back">
+              <h5 class="projects-card__title">RaptCash</h5>
+              <p class="projects-card__text">We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.</p>
+              <div class="projects-card__icon-wrapp"><a class="projects-card__link" href="#"> 
+                  <svg class="svg-icon projects-card__icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="projects__card-item projects-card--testing">
+          <div class="projects-card">
+            <div class="projects-card__front"><img src="img/src/testing-2.jpg" alt="project"/></div>
+            <div class="projects-card__back">
+              <h5 class="projects-card__title">Search by photo</h5>
+              <p class="projects-card__text">We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.</p>
+              <div class="projects-card__icon-wrapp"><a class="projects-card__link" href="#"> 
+                  <svg class="svg-icon projects-card__icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="projects__btn">
+        <div class="btn--blue"><a class="btn"><span></span>
+            <p>See All Projects</p>
+            <p> 
+              <svg class="svg-icon btn__icon">
+                <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+              </svg>
+            </p></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Our team-->
+  <section class="our-team">
+    <div class="container">
+      <div class="row"> 
+        <div class="col-12">
+          <div class="our-team__title">
+            <p>WHO WE ARE</p>
+            <h2>Meet The Team</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row"> 
+        <div class="col-12 col-sm-6 col-lg-3 our-team__item">
+          <div class="our-team-card">
+            <div class="our-team-card__top"><img src="img/src/team-1.jpg" alt="people"/></div>
+            <div class="our-team-card__bottom"> 
+              <h5>Mary Lee</h5>
+              <p>Software Developer</p>
+              <ul class="our-team-card__social-list">
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#facebook-f"></use>
+                    </svg></a></li>
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#instagram"></use>
+                    </svg></a></li>
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#linkedin"></use>
+                    </svg></a></li>
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#twitter"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 our-team__item">
+          <div class="our-team-card">
+            <div class="our-team-card__top"><img src="img/src/team-2.jpg" alt="people"/></div>
+            <div class="our-team-card__bottom"> 
+              <h5>Ryan Wilson</h5>
+              <p>CEO</p>
+              <ul class="our-team-card__social-list">
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#facebook-f"></use>
+                    </svg></a></li>
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#instagram"></use>
+                    </svg></a></li>
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#linkedin"></use>
+                    </svg></a></li>
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#twitter"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 col-lg-3 our-team__item">
+          <div class="our-team-card">
+            <div class="our-team-card__top"><img src="img/src/team-3.jpg" alt="people"/></div>
+            <div class="our-team-card__bottom"> 
+              <h5>Sam Robinson</h5>
+              <p>Senior Developer</p>
+              <ul class="our-team-card__social-list">
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#facebook-f"></use>
+                    </svg></a></li>
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#instagram"></use>
+                    </svg></a></li>
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#linkedin"></use>
+                    </svg></a></li>
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#twitter"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="our-team-card">
+            <div class="our-team-card__top"><img src="img/src/team-4.jpg" alt="people"/></div>
+            <div class="our-team-card__bottom"> 
+              <h5>Jill Peterson</h5>
+              <p>Senior Developer</p>
+              <ul class="our-team-card__social-list">
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#facebook-f"></use>
+                    </svg></a></li>
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#instagram"></use>
+                    </svg></a></li>
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#linkedin"></use>
+                    </svg></a></li>
+                <li> <a href="#"> 
+                    <svg class="svg-icon our-team-card__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#twitter"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Our team-->
+  <!-- People Say-->
+  <section class="people-say">
+    <div class="container">
+      <div class="row"> 
+        <div class="col-12">
+          <div class="people-say__title">
+            <p>REVIEWS FROM OUR CLIENTS</p>
+            <h2>What People Say</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 people-say__item"> 
+          <div class="people-say-card">
+            <div class="people-say-card__top"><img src="img/src/people-1.jpg" alt="people"/>
+              <div class="people-say-card__top-info"> 
+                <h5>Catherine Williams</h5>
+                <p>Regular client</p>
+              </div>
+            </div>
+            <div class="people-say-card__bottom"> 
+              <p>PathSoft offers a high caliber of resources skilled in Microsoft Azure.NET, mobile and Quality Assurance. They became our true business partners over the past three years.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 people-say__item">
+          <div class="people-say-card">
+            <div class="people-say-card__top"><img src="img/src/people-2.jpg" alt="people"/>
+              <div class="people-say-card__top-info"> 
+                <h5>Rupert Wood</h5>
+                <p>Regular client</p>
+              </div>
+            </div>
+            <div class="people-say-card__bottom"> 
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit consequuntur sequi eos beatae deleniti culpa cupiditate rerum. Similique, blanditiis rem perspiciatis fugiat voluptatem quas officiis ducimus reprehenderit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="people-say-card">
+            <div class="people-say-card__top"><img src="img/src/people-3.jpg" alt="people"/>
+              <div class="people-say-card__top-info"> 
+                <h5>Samantha Brown</h5>
+                <p>Regular client</p>
+              </div>
+            </div>
+            <div class="people-say-card__bottom"> 
+              <p>We sincerely hope that each and every user entering our website will find exactly. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="projects__btn">
+        <div class="btn--blue"><a class="btn"><span></span>
+            <p>See All Reviews</p>
+            <p> 
+              <svg class="svg-icon btn__icon">
+                <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+              </svg>
+            </p></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /People Say-->
+  <!-- Latest News-->
+  <section class="latest-news">
+    <div class="container">
+      <div class="row"> 
+        <div class="col-12">
+          <div class="latest-news__title">
+            <p>MORE INFO ABOUT</p>
+            <h2>Latest News</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 latest-news__item"> <a class="latest-news-card" href="#">
+            <div class="latest-news-card__top"><img src="img/src/news-1.jpg" alt="picture"/></div>
+            <div class="latest-news-card__bottom"> 
+              <h5>Benefits Of Async/Await</h5>
+              <p>Asynchronous functions are a good and bad thing in JavaScript.</p>
+              <p class="latest-news-card__date">07/01/2021</p>
+            </div></a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 latest-news__item"><a class="latest-news-card" href="#">
+            <div class="latest-news-card__top"><img src="img/src/news-2.jpg" alt="picture"/></div>
+            <div class="latest-news-card__bottom"> 
+              <h5>Key Considerations Of IPaaS</h5>
+              <p>Digital transformation requires cloud appropriate adoption.</p>
+              <p class="latest-news-card__date">05/01/2021</p>
+            </div></a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4"><a class="latest-news-card" href="#">
+            <div class="latest-news-card__top"><img src="img/src/news-3.jpg" alt="picture"/></div>
+            <div class="latest-news-card__bottom"> 
+              <h5>Hibernate Query Language</h5>
+              <p>In this tutorial, we will discuss the Hibernate Query Language.</p>
+              <p class="latest-news-card__date">01/01/2021</p>
+            </div></a>
+        </div>
+      </div>
+      <div class="projects__btn">
+        <div class="btn--blue"><a class="btn"><span></span>
+            <p>See All News</p>
+            <p> 
+              <svg class="svg-icon btn__icon">
+                <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+              </svg>
+            </p></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Latest News-->
+  <!-- Footer-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row"> 
+        <!-- Footer-about-->
+        <div class="col-sm-12 col-md-5 col-lg-3"> <a class="footer__logo" href="#"><img src="img/src/gem.png" alt="logo"><span>MasterSoft</span></a>
+          <p class="footer__text">Our company has been developing high-quality and reliable software for corporate needs since 2008. We are renowned professionals of software development. </p>
+          <ul class="footer__social">
+            <li><a href="http://" target="_blank" title="facebook"> 
+                <svg class="svg-icon footer__icon">
+                  <use xlink:href="img/svg/symbol/sprite.svg#facebook-f"></use>
+                </svg></a></li>
+            <li><a href="http://" target="_blank" title="instagram">
+                <svg class="svg-icon footer__icon">
+                  <use xlink:href="img/svg/symbol/sprite.svg#instagram"></use>
+                </svg></a></li>
+            <li><a href="http://" target="_blank" title="linkedin">
+                <svg class="svg-icon footer__icon">
+                  <use xlink:href="img/svg/symbol/sprite.svg#linkedin"></use>
+                </svg></a></li>
+            <li><a href="http://" target="_blank" title="twitter">
+                <svg class="svg-icon footer__icon">
+                  <use xlink:href="img/svg/symbol/sprite.svg#twitter"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+        <!-- /Footer-about-->
+        <div class="col-xl-1 d-none d-xl-block"></div>
+        <!-- Footer-menu-->
+        <div class="col-6 col-sm-6 col-md-3 col-lg-2 footer__col-2"> 
+          <h4 class="footer__title">Menu</h4>
+          <ul class="footer__list"> 
+            <li class="footer__item"><a class="footer__link" href="#" data-title="About Us"> <span>About Us</span></a></li>
+            <li class="footer__item"><a class="footer__link" href="#" data-title="Services"> <span>Services</span></a></li>
+            <li class="footer__item"><a class="footer__link" href="#" data-title="Pricing"> <span>Pricing</span></a></li>
+            <li class="footer__item"><a class="footer__link" href="#" data-title="News"> <span>News</span></a></li>
+            <li class="footer__item"><a class="footer__link" href="#" data-title="Contact Us"> <span>Contact Us</span></a></li>
+          </ul>
+        </div>
+        <!-- /Footer-menu-->
+        <!-- Footer-offer-->
+        <div class="col-6 col-sm-6 col-md-4 col-lg-2 footer__col-3"> 
+          <h4 class="footer__title">What We Offer </h4>
+          <ul class="footer__list"> 
+            <li class="footer__item"><a class="footer__link" href="#" data-title="DB Management"> <span>DB Management</span></a></li>
+            <li class="footer__item"><a class="footer__link" href="#" data-title="IOS/MacOS"> <span>IOS/MacOS</span></a></li>
+            <li class="footer__item"><a class="footer__link" href="#" data-title="Android Apps"> <span>Android Apps</span></a></li>
+            <li class="footer__item"><a class="footer__link" href="#" data-title="Windows Apps"> <span>Windows Apps</span></a></li>
+            <li class="footer__item"><a class="footer__link" href="#" data-title="UX &amp; UI"> <span>UX & UI</span></a></li>
+          </ul>
+        </div>
+        <!-- /Footer-offer-->
+        <!-- Footer-contacts-->
+        <div class="col-md-12 col-lg-4 footer__col-4"> 
+          <h4 class="footer__title">Our contacts </h4>
+          <ul class="footer__contact-list">
+            <li>
+              <svg class="svg-icon footer__icon footer__icon_contacts">
+                <use xlink:href="img/svg/symbol/sprite.svg#geo"></use>
+              </svg>
+              <p>12 rue Eugеne Hеnaff Wilmington, DE 19805</p>
+            </li>
+            <li>
+              <svg class="svg-icon footer__icon footer__icon_contacts">
+                <use xlink:href="img/svg/symbol/sprite.svg#smartphone"></use>
+              </svg><a class="footer__contact-list-link" href="tel:+11234567789">+1 123-456-7789</a><a href="tel:+19876543211">+1 987-654-3211</a>
+            </li>
+            <li>
+              <svg class="svg-icon footer__icon footer__icon_contacts">
+                <use xlink:href="img/svg/symbol/sprite.svg#mail2"></use>
+              </svg><a href="mailto:mail@example.com">mail@example.com</a>
+            </li>
+          </ul>
+          <div class="footer__form-wrapp">
+            <h4 class="footer__title">Subscribe</h4>
+            <form class="footer__form">
+              <input type="email" placeholder="Your email" required>
+              <div class="btn--blue"><a class="btn"><span></span>
+                  <p>Subscribe</p>
+                  <p> 
+                    <svg class="svg-icon btn__icon">
+                      <use xlink:href="img/svg/symbol/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </p></a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- /Footer-contacts-->
+      </div>
+    </div>
+  </footer>
+  <!-- /Footer-->
+  <!-- Scripts-->
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/jQuery.main.js"></script>
+  <!-- /Scripts-->
 </body>
